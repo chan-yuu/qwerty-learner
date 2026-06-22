@@ -14,7 +14,7 @@ import { DonateCard } from '@/components/DonateCard'
 import Header from '@/components/Header'
 import Tooltip from '@/components/Tooltip'
 import { idDictionaryMap } from '@/resources/dictionary'
-import { currentChapterAtom, currentDictIdAtom, isReviewModeAtom, randomConfigAtom, reviewModeInfoAtom } from '@/store'
+import { currentChapterAtom, currentDictIdAtom, customDictsAtom, isReviewModeAtom, randomConfigAtom, reviewModeInfoAtom } from '@/store'
 import { IsDesktop, isLegal } from '@/utils'
 import { useSaveChapterRecord } from '@/utils/db'
 import { useMixPanelChapterLogUploader } from '@/utils/mixpanel'
@@ -48,15 +48,18 @@ const App: React.FC = () => {
     }
   }, [])
 
+  const customDicts = useAtomValue(customDictsAtom)
+
   // 在组件挂载和currentDictId改变时，检查当前字典是否存在，如果不存在，则将其重置为默认值
   useEffect(() => {
     const id = currentDictId
-    if (!(id in idDictionaryMap)) {
+    const exists = id in idDictionaryMap || customDicts.some((d) => d.id === id)
+    if (!exists) {
       setCurrentDictId('cet4')
       setCurrentChapter(0)
       return
     }
-  }, [currentDictId, setCurrentChapter, setCurrentDictId])
+  }, [currentDictId, customDicts, setCurrentChapter, setCurrentDictId])
 
   const skipWord = useCallback(() => {
     dispatch({ type: TypingStateActionType.SKIP_WORD })

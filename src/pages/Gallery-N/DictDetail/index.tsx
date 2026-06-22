@@ -7,7 +7,7 @@ import useErrorWordData from '../hooks/useErrorWords'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Tabs, TabsContent } from '@/components/ui/tabs'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
-import { currentChapterAtom, currentDictIdAtom, reviewModeInfoAtom } from '@/store'
+import { currentChapterAtom, currentDictIdAtom, customDictsAtom, reviewModeInfoAtom } from '@/store'
 import type { Dictionary } from '@/typings'
 import range from '@/utils/range'
 import { useAtom, useSetAtom } from 'jotai'
@@ -16,6 +16,7 @@ import { useNavigate } from 'react-router-dom'
 import IcOutlineCollectionsBookmark from '~icons/ic/outline-collections-bookmark'
 import MajesticonsPaperFoldTextLine from '~icons/majesticons/paper-fold-text-line'
 import PajamasReviewList from '~icons/pajamas/review-list'
+import IconTrash from '~icons/tabler/trash'
 
 enum Tab {
   Chapters = 'chapters',
@@ -26,6 +27,7 @@ enum Tab {
 export default function DictDetail({ dictionary: dict }: { dictionary: Dictionary }) {
   const [currentChapter, setCurrentChapter] = useAtom(currentChapterAtom)
   const [currentDictId, setCurrentDictId] = useAtom(currentDictIdAtom)
+  const setCustomDicts = useSetAtom(customDictsAtom)
   const [curTab, setCurTab] = useState<Tab>(Tab.Chapters)
   const setReviewModeInfo = useSetAtom(reviewModeInfoAtom)
   const navigate = useNavigate()
@@ -68,11 +70,28 @@ export default function DictDetail({ dictionary: dict }: { dictionary: Dictionar
 
   return (
     <div className="flex flex-col rounded-[4rem] px-4 py-3 pl-5 text-gray-800 dark:text-gray-300">
-      <div className="text relative flex h-40 flex-col gap-2">
+      <div className="text relative flex h-40 flex-col gap-2 text-left">
         <h3 className="text-2xl font-semibold">{dict.name}</h3>
         <p className="mt-1">{dict.chapterCount} 章节</p>
         <p>共 {dict.length} 词</p>
         <p>{dict.description}</p>
+        {dict.id.startsWith('custom_') && (
+          <button
+            onClick={() => {
+              if (window.confirm('确定要删除这个自定义词库吗？此操作不可恢复。')) {
+                setCustomDicts((prev) => prev.filter((d) => d.id !== dict.id))
+                if (currentDictId === dict.id) {
+                  setCurrentDictId('cet4')
+                  setCurrentChapter(0)
+                }
+              }
+            }}
+            className="absolute right-4 top-0 flex items-center gap-1 rounded-lg bg-rose-50 px-3 py-1.5 text-sm font-medium text-rose-600 transition-colors hover:bg-rose-100 dark:bg-rose-950/30 dark:text-rose-400 dark:hover:bg-rose-900/30"
+          >
+            <IconTrash className="h-3.5 w-3.5" />
+            删除词库
+          </button>
+        )}
         <div className="absolute bottom-5 right-4">
           <ToggleGroup type="single" value={curTab} onValueChange={handleTabChange}>
             <ToggleGroupItem

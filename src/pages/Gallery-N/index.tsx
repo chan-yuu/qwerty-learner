@@ -1,9 +1,10 @@
 import DictionaryGroup from './CategoryDicts'
+import CustomDictManager from './CustomDictManager'
 import DictRequest from './DictRequest'
 import { LanguageTabSwitcher } from './LanguageTabSwitcher'
 import Layout from '@/components/Layout'
 import { dictionaries } from '@/resources/dictionary'
-import { currentDictInfoAtom } from '@/store'
+import { currentDictInfoAtom, customDictsAtom } from '@/store'
 import type { Dictionary, LanguageCategoryType } from '@/typings'
 import groupBy, { groupByDictTags } from '@/utils/groupBy'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
@@ -33,9 +34,25 @@ export default function GalleryPage() {
   const [galleryState, setGalleryState] = useImmer<GalleryState>(initialGalleryState)
   const navigate = useNavigate()
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
+  const customDicts = useAtomValue(customDictsAtom)
 
   const { groupedByCategoryAndTag } = useMemo(() => {
-    const currentLanguageCategoryDicts = dictionaries.filter((dict) => dict.languageCategory === galleryState.currentLanguageTab)
+    const allDicts = [
+      ...dictionaries,
+      ...customDicts.map((d) => ({
+        id: d.id,
+        name: d.name,
+        description: d.description,
+        category: d.category || '自定义',
+        tags: d.tags || ['自定义'],
+        url: d.url,
+        length: d.length,
+        language: d.language || 'en',
+        languageCategory: d.languageCategory || 'en',
+        chapterCount: Math.ceil(d.length / 20) || 1,
+      })),
+    ]
+    const currentLanguageCategoryDicts = allDicts.filter((dict) => dict.languageCategory === galleryState.currentLanguageTab)
     const groupedByCategory = Object.entries(groupBy(currentLanguageCategoryDicts, (dict) => dict.category))
     const groupedByCategoryAndTag = groupedByCategory.map(
       ([category, dicts]) => [category, groupByDictTags(dicts)] as [string, Record<string, Dictionary[]>],
@@ -44,7 +61,7 @@ export default function GalleryPage() {
     return {
       groupedByCategoryAndTag,
     }
-  }, [galleryState.currentLanguageTab])
+  }, [galleryState.currentLanguageTab, customDicts])
 
   const onBack = useCallback(() => {
     navigate('/')
@@ -69,7 +86,10 @@ export default function GalleryPage() {
             <div className="flex h-full flex-col overflow-y-auto">
               <div className="flex h-20 w-full items-center justify-between pb-6 pr-20">
                 <LanguageTabSwitcher />
-                <DictRequest />
+                <div className="flex items-center gap-3">
+                  <CustomDictManager />
+                  <DictRequest />
+                </div>
               </div>
               <ScrollArea.Root className="flex-1 overflow-y-auto">
                 <ScrollArea.Viewport className="h-full w-full ">
