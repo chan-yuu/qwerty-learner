@@ -146,12 +146,132 @@ export default function CustomDictManager() {
 
     let parsedWords: Word[] = []
     const trimmedInput = rawText.trim()
-    if ((trimmedInput.startsWith('[') && trimmedInput.endsWith(']')) || (trimmedInput.startsWith('{') && trimmedInput.endsWith('}'))) {
-      try {
-        const obj = JSON.parse(trimmedInput)
-        if (Array.isArray(obj)) {
-          parsedWords = obj
-            .map((item: { name?: string; word?: string; trans?: unknown; translation?: string; usphone?: string; ukphone?: string }) => {
+
+    // Extract all top-level [...] and {...} blocks
+    const arrayBlocks: string[] = []
+    const objectBlocks: string[] = []
+
+    let depth = 0
+    let startIdx = -1
+    let inQuote = false
+    let escape = false
+
+    // We scan to find all top-level bracketed blocks, ignoring brackets inside string literals
+    for (let i = 0; i < trimmedInput.length; i++) {
+      const char = trimmedInput[i]
+      if (escape) {
+        escape = false
+        continue
+      }
+      if (char === '\\') {
+        escape = true
+        continue
+      }
+      if (char === '"') {
+        inQuote = !inQuote
+        continue
+      }
+      if (inQuote) {
+        continue
+      }
+
+      if (char === '[') {
+        if (depth === 0) {
+          startIdx = i
+        }
+        depth++
+      } else if (char === ']') {
+        depth--
+        if (depth === 0 && startIdx !== -1) {
+          arrayBlocks.push(trimmedInput.substring(startIdx, i + 1))
+          startIdx = -1
+        }
+      }
+    }
+
+    // If no arrays found, search for object blocks
+    if (arrayBlocks.length === 0) {
+      depth = 0
+      startIdx = -1
+      inQuote = false
+      escape = false
+      for (let i = 0; i < trimmedInput.length; i++) {
+        const char = trimmedInput[i]
+        if (escape) {
+          escape = false
+          continue
+        }
+        if (char === '\\') {
+          escape = true
+          continue
+        }
+        if (char === '"') {
+          inQuote = !inQuote
+          continue
+        }
+        if (inQuote) {
+          continue
+        }
+
+        if (char === '{') {
+          if (depth === 0) {
+            startIdx = i
+          }
+          depth++
+        } else if (char === '}') {
+          depth--
+          if (depth === 0 && startIdx !== -1) {
+            objectBlocks.push(trimmedInput.substring(startIdx, i + 1))
+            startIdx = -1
+          }
+        }
+      }
+    }
+
+    if (arrayBlocks.length > 0) {
+      for (const block of arrayBlocks) {
+        try {
+          const arr = JSON.parse(block)
+          if (Array.isArray(arr)) {
+            const words = arr
+              .map((item: { name?: string; word?: string; trans?: unknown; translation?: string; usphone?: string; ukphone?: string }) => {
+                const wordName = item.name || item.word || ''
+                let trans: string[] = []
+                if (Array.isArray(item.trans)) {
+                  trans = item.trans.map(String)
+                } else if (typeof item.trans === 'string') {
+                  trans = [item.trans]
+                } else if (typeof item.translation === 'string') {
+                  trans = [item.translation]
+                }
+                return {
+                  name: wordName,
+                  trans,
+                  usphone: item.usphone || '',
+                  ukphone: item.ukphone || '',
+                }
+              })
+              .filter((w) => w.name)
+            parsedWords.push(...words)
+          }
+        } catch (e) {
+          // ignore
+        }
+      }
+    } else if (objectBlocks.length > 0) {
+      for (const block of objectBlocks) {
+        try {
+          const obj = JSON.parse(block)
+          if (typeof obj === 'object' && obj !== null) {
+            if ('name' in obj || 'word' in obj) {
+              const item = obj as {
+                name?: string
+                word?: string
+                trans?: unknown
+                translation?: string
+                usphone?: string
+                ukphone?: string
+              }
               const wordName = item.name || item.word || ''
               let trans: string[] = []
               if (Array.isArray(item.trans)) {
@@ -161,47 +281,50 @@ export default function CustomDictManager() {
               } else if (typeof item.translation === 'string') {
                 trans = [item.translation]
               }
-              return {
-                name: wordName,
-                trans,
-                usphone: item.usphone || '',
-                ukphone: item.ukphone || '',
+              if (wordName) {
+                parsedWords.push({
+                  name: wordName,
+                  trans,
+                  usphone: item.usphone || '',
+                  ukphone: item.ukphone || '',
+                })
               }
-            })
-            .filter((w) => w.name)
-        } else if (typeof obj === 'object' && obj !== null) {
-          parsedWords = Object.entries(obj)
-            .map(([key, val]) => {
-              let trans: string[] = []
-              if (Array.isArray(val)) {
-                trans = val.map(String)
-              } else if (typeof val === 'string') {
-                trans = val
-                  .split(/[,，;；/]+/)
-                  .map((s) => s.trim())
-                  .filter(Boolean)
-              } else if (val && typeof val === 'object') {
-                const nestedVal =
-                  (val as { trans?: unknown; translation?: string })?.trans ||
-                  (val as { trans?: unknown; translation?: string })?.translation ||
-                  ''
-                if (Array.isArray(nestedVal)) {
-                  trans = nestedVal.map(String)
-                } else if (typeof nestedVal === 'string') {
-                  trans = [nestedVal]
-                }
-              }
-              return {
-                name: key,
-                trans,
-                usphone: (val as { usphone?: string })?.usphone || '',
-                ukphone: (val as { ukphone?: string })?.ukphone || '',
-              }
-            })
-            .filter((w) => w.name)
+            } else {
+              const words = Object.entries(obj)
+                .map(([key, val]) => {
+                  let trans: string[] = []
+                  if (Array.isArray(val)) {
+                    trans = val.map(String)
+                  } else if (typeof val === 'string') {
+                    trans = val
+                      .split(/[,，;；/]+/)
+                      .map((s) => s.trim())
+                      .filter(Boolean)
+                  } else if (val && typeof val === 'object') {
+                    const nestedVal =
+                      (val as { trans?: unknown; translation?: string })?.trans ||
+                      (val as { trans?: unknown; translation?: string })?.translation ||
+                      ''
+                    if (Array.isArray(nestedVal)) {
+                      trans = nestedVal.map(String)
+                    } else if (typeof nestedVal === 'string') {
+                      trans = [nestedVal]
+                    }
+                  }
+                  return {
+                    name: key,
+                    trans,
+                    usphone: (val as { usphone?: string })?.usphone || '',
+                    ukphone: (val as { ukphone?: string })?.ukphone || '',
+                  }
+                })
+                .filter((w) => w.name)
+              parsedWords.push(...words)
+            }
+          }
+        } catch (e) {
+          // ignore
         }
-      } catch (e) {
-        // Fallback to text parsing
       }
     }
 
