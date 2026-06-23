@@ -10,6 +10,7 @@ import IconBook from '~icons/tabler/book'
 import IconEdit from '~icons/tabler/edit'
 import IconPlus from '~icons/tabler/plus'
 import IconTrash from '~icons/tabler/trash'
+import IconUpload from '~icons/tabler/upload'
 
 export default function CustomDictManager() {
   const [customDicts, setCustomDicts] = useAtom(customDictsAtom)
@@ -26,6 +27,7 @@ export default function CustomDictManager() {
   const [langCategory, setLangCategory] = useState<LanguageCategoryType>('en')
   const [rawText, setRawText] = useState('')
   const [errorMsg, setErrorMsg] = useState('')
+  const [fileName, setFileName] = useState('')
 
   const handleOpenEdit = useCallback((dict: CustomDict) => {
     setEditingId(dict.id)
@@ -36,6 +38,7 @@ export default function CustomDictManager() {
     const wordsStr = dict.words.map((w) => `${w.name} / ${w.trans.join(', ')}`).join('\n')
     setRawText(wordsStr)
     setErrorMsg('')
+    setFileName('')
     setActiveTab('add')
   }, [])
 
@@ -46,8 +49,32 @@ export default function CustomDictManager() {
     setLangCategory('en')
     setRawText('')
     setErrorMsg('')
+    setFileName('')
     setActiveTab('add')
   }, [])
+
+  const handleFileUpload = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0]
+      if (!file) return
+
+      setFileName(file.name)
+      if (!name) {
+        const baseName = file.name.substring(0, file.name.lastIndexOf('.')) || file.name
+        setName(baseName)
+      }
+
+      const reader = new FileReader()
+      reader.onload = (event) => {
+        const text = event.target?.result as string
+        if (!text) return
+        setRawText(text)
+        setErrorMsg('')
+      }
+      reader.readAsText(file)
+    },
+    [name],
+  )
 
   const handleDelete = useCallback(
     (id: string) => {
@@ -119,7 +146,7 @@ export default function CustomDictManager() {
 
     let parsedWords: Word[] = []
     const trimmedInput = rawText.trim()
-    if (trimmedInput.startsWith('[') && trimmedInput.endsWith(']')) {
+    if ((trimmedInput.startsWith('[') && trimmedInput.endsWith(']')) || (trimmedInput.startsWith('{') && trimmedInput.endsWith('}'))) {
       try {
         const obj = JSON.parse(trimmedInput)
         if (Array.isArray(obj)) {
@@ -139,6 +166,36 @@ export default function CustomDictManager() {
                 trans,
                 usphone: item.usphone || '',
                 ukphone: item.ukphone || '',
+              }
+            })
+            .filter((w) => w.name)
+        } else if (typeof obj === 'object' && obj !== null) {
+          parsedWords = Object.entries(obj)
+            .map(([key, val]) => {
+              let trans: string[] = []
+              if (Array.isArray(val)) {
+                trans = val.map(String)
+              } else if (typeof val === 'string') {
+                trans = val
+                  .split(/[,，;；/]+/)
+                  .map((s) => s.trim())
+                  .filter(Boolean)
+              } else if (val && typeof val === 'object') {
+                const nestedVal =
+                  (val as { trans?: unknown; translation?: string })?.trans ||
+                  (val as { trans?: unknown; translation?: string })?.translation ||
+                  ''
+                if (Array.isArray(nestedVal)) {
+                  trans = nestedVal.map(String)
+                } else if (typeof nestedVal === 'string') {
+                  trans = [nestedVal]
+                }
+              }
+              return {
+                name: key,
+                trans,
+                usphone: (val as { usphone?: string })?.usphone || '',
+                ukphone: (val as { ukphone?: string })?.ukphone || '',
               }
             })
             .filter((w) => w.name)
@@ -338,6 +395,14 @@ export default function CustomDictManager() {
                   <span>单词内容 *</span>
                   <span className="text-xs font-normal text-slate-400">支持文本格式或 Qwerty JSON 格式</span>
                 </label>
+                <div className="flex gap-2 pb-1.5 pt-1">
+                  <label className="flex cursor-pointer select-none items-center gap-1.5 rounded-lg border border-indigo-200 bg-indigo-50/50 px-3 py-1.5 text-xs font-semibold text-indigo-600 transition-colors hover:bg-indigo-50 dark:border-indigo-800 dark:bg-indigo-950/20 dark:text-indigo-400 dark:hover:bg-indigo-950/40">
+                    <IconUpload className="h-3.5 w-3.5" />
+                    <span>选择导入文件 (.json / .txt)</span>
+                    <input type="file" accept=".json,.txt" className="hidden" onChange={handleFileUpload} />
+                  </label>
+                  {fileName && <span className="self-center text-xs text-slate-500 dark:text-slate-400">已导入: {fileName}</span>}
+                </div>
                 <textarea
                   required
                   rows={8}
