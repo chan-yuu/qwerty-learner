@@ -1,0 +1,49 @@
+# 示例：自定义词典（文本行格式）
+# 说明：
+# 1. 每一行为一个单词及其释义。
+# 2. 默认每 20 个单词为一个章节（Chapter）。如果想分章节管理，每 20 个单词放入一组即可。
+# 3. 支持使用 '/'、':'、'：'、'-' 或空格等作为分隔符。
+
+# --- 第一章 (Chapter 1) ---
+apple / 苹果
+banana / 香蕉
+cherry / 樱桃
+grape / 葡萄
+orange / 橙子
+peach / 桃子
+pear / 梨
+lemon / 柠檬
+mango / 芒果
+melon / 甜瓜
+berry / 浆果
+plum / 李子
+apricot / 杏子
+date / 椰枣
+fig / 无花果
+kiwi / 猕猴桃
+papaya / 木瓜
+guava / 番石榴
+coconut / 椰子
+pineapple / 菠萝
+
+# --- 第二章 (Chapter 2) ---
+carrot / 胡萝卜
+potato / 土豆
+tomato / 西红柿
+onion / 洋葱
+garlic / 大蒜
+ginger / 生姜
+cabbage / 卷心菜
+spinach / 菠菜
+broccoli / 西兰花
+cucumber / 黄瓜
+eggplant / 茄子
+pepper / 辣椒
+radish / 萝卜
+pumpkin / 南瓜
+corn / 玉米
+mushroom / 蘑菇
+lettuce / 生菜
+celery / 芹菜
+pea / 豌豆
+bean / 豆子

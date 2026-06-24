@@ -16,10 +16,44 @@ import type { ReviewRecord } from '@/utils/db/record'
 import { atom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
 
+export type CustomDict = {
+  id: string
+  name: string
+  description: string
+  category: string
+  tags: string[]
+  url: string
+  length: number
+  language: LanguageType
+  languageCategory: LanguageCategoryType
+  words: Word[]
+}
+
+export const customDictsAtom = atomWithStorage<CustomDict[]>('customDicts', [])
+
 export const currentDictIdAtom = atomWithStorage('currentDict', 'cet4')
 export const currentDictInfoAtom = atom<Dictionary>((get) => {
   const id = get(currentDictIdAtom)
   let dict = idDictionaryMap[id]
+  if (!dict) {
+    const customDicts = get(customDictsAtom)
+    const custom = customDicts.find((d) => d.id === id)
+    if (custom) {
+      const chapterCount = Math.ceil(custom.words.length / 20) || 1 // 20 is CHAPTER_LENGTH
+      dict = {
+        id: custom.id,
+        name: custom.name,
+        description: custom.description,
+        category: custom.category,
+        tags: custom.tags,
+        url: custom.url,
+        length: custom.length,
+        language: custom.language,
+        languageCategory: custom.languageCategory,
+        chapterCount,
+      }
+    }
+  }
   // 如果 dict 不存在，则返回 cet4. Typing 中会检查 DictId 是否存在，如果不存在则会重置为 cet4
   if (!dict) {
     dict = idDictionaryMap.cet4

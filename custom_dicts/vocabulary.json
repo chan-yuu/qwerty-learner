@@ -1,0 +1,2467 @@
+[
+  {
+    "name": "vision",
+    "trans": ["愿景", "构想", "视野"],
+    "usphone": "ˈvɪʒn",
+    "ukphone": "ˈvɪʒn"
+  },
+  {
+    "name": "traces",
+    "trans": ["轨迹", "推理路径", "痕迹"],
+    "usphone": "treɪsɪz",
+    "ukphone": "treɪsɪz"
+  },
+  {
+    "name": "artifact",
+    "trans": ["产物", "生成构件", "工件"],
+    "usphone": "ˈɑːrtɪfækt",
+    "ukphone": "ˈɑːtɪfækt"
+  },
+  {
+    "name": "executable object",
+    "trans": ["可执行对象"],
+    "usphone": "ɪɡˈzekjətəbl ˈɑːbdʒekt",
+    "ukphone": "ɪɡˈzekjətəbl ˈɒbdʒɪkt"
+  },
+  {
+    "name": "instances",
+    "trans": ["样本实例", "实例", "题目样本"],
+    "usphone": "ˈɪnstənsɪz",
+    "ukphone": "ˈɪnstənsɪz"
+  },
+  {
+    "name": "references",
+    "trans": ["参考答案", "标准解", "参考资料"],
+    "usphone": "ˈrefrənsɪz",
+    "ukphone": "ˈrefrənsɪz"
+  },
+  {
+    "name": "responses",
+    "trans": ["模型输出", "回答", "响应"],
+    "usphone": "rɪˈspɑːnsɪz",
+    "ukphone": "rɪˈspɒnsɪz"
+  },
+  {
+    "name": "property",
+    "trans": ["特性", "属性", "性质"],
+    "usphone": "ˈprɑːpərti",
+    "ukphone": "ˈprɒpəti"
+  },
+  {
+    "name": "asymmetry",
+    "trans": ["不对称性"],
+    "usphone": "eɪˈsɪmətri",
+    "ukphone": "eɪˈsɪmətri"
+  },
+  {
+    "name": "oracle",
+    "trans": ["预言机", "标准校验器", "神谕"],
+    "usphone": "ˈɔːrəkl",
+    "ukphone": "ˈɒrəkl"
+  },
+  {
+    "name": "complementary",
+    "trans": ["互补的", "补充的"],
+    "usphone": "ˌkɑːmplɪˈmentri",
+    "ukphone": "ˌkɒmplɪˈmentri"
+  },
+  {
+    "name": "graph traversal",
+    "trans": ["图遍历"],
+    "usphone": "ɡræf trəˈværsl",
+    "ukphone": "ɡrɑːf trəˈvæsl"
+  },
+  {
+    "name": "dynamic program",
+    "trans": ["动态规划"],
+    "usphone": "daɪˈnæmɪk ˈproʊɡræm",
+    "ukphone": "daɪˈnæmɪk ˈprəʊɡræm"
+  },
+  {
+    "name": "calibrated",
+    "trans": ["校准的", "标定的"],
+    "usphone": "ˈkælɪbreɪtɪd",
+    "ukphone": "ˈkælɪbreɪtɪd"
+  },
+  {
+    "name": "subset-sum",
+    "trans": ["子集和"],
+    "usphone": "ˈsʌbset sʌm",
+    "ukphone": "ˈsʌbset sʌm"
+  },
+  {
+    "name": "constraint satisfaction",
+    "trans": ["约束满足"],
+    "usphone": "kənˈstreɪnt ˌsætɪsˈfækʃn",
+    "ukphone": "kənˈstreɪnt ˌsætɪsˈfækʃn"
+  },
+  {
+    "name": "durable",
+    "trans": ["稳定的", "持久的", "耐用的"],
+    "usphone": "ˈdʊrəbəl",
+    "ukphone": "ˈdjʊərəbl"
+  },
+  {
+    "name": "policy",
+    "trans": ["策略", "方针"],
+    "usphone": "ˈpɑːləsi",
+    "ukphone": "ˈpɒləsi"
+  },
+  {
+    "name": "verifier",
+    "trans": ["验证器", "校验程序"],
+    "usphone": "ˈverɪfaɪər",
+    "ukphone": "ˈverɪfaɪə(r)"
+  },
+  {
+    "name": "reward",
+    "trans": ["奖励", "回报"],
+    "usphone": "rɪˈwɔːrd",
+    "ukphone": "rɪˈwɔːd"
+  },
+  {
+    "name": "instantiate",
+    "trans": ["实例化", "落地实现"],
+    "usphone": "ɪnˈstænʃieɪt",
+    "ukphone": "ɪnˈstænʃieɪt"
+  },
+  {
+    "name": "generator-solver",
+    "trans": ["生成-求解器"],
+    "usphone": "ˈdʒenəreɪtər ˈsɑːlvər",
+    "ukphone": "ˈdʒenəreɪtə ˈsɒlvə"
+  },
+  {
+    "name": "seeds",
+    "trans": ["种子样本", "种子"],
+    "usphone": "siːdz",
+    "ukphone": "siːdz"
+  },
+  {
+    "name": "staged validation",
+    "trans": ["分阶段校验"],
+    "usphone": "steɪdʒd ˌvæləˈdeɪʃn",
+    "ukphone": "steɪdʒd ˌvælɪˈdeɪʃn"
+  },
+  {
+    "name": "semantic self-review",
+    "trans": ["语义自审"],
+    "usphone": "səˈmæntɪk self rɪˈvjuː",
+    "ukphone": "sɪˈmæntɪk self rɪˈvjuː"
+  },
+  {
+    "name": "novelty checks",
+    "trans": ["新颖度校验"],
+    "usphone": "ˈnɑːvəlti tʃeks",
+    "ukphone": "ˈnɒvəlti tʃeks"
+  },
+  {
+    "name": "regime",
+    "trans": ["性能区间", "模式", "体制"],
+    "usphone": "reɪˈʒiːm",
+    "ukphone": "reɪˈʒiːm"
+  },
+  {
+    "name": "relative gain",
+    "trans": ["相对提升幅度", "相对增益"],
+    "usphone": "ˈrelətɪv ɡeɪn",
+    "ukphone": "ˈrelətɪv ɡeɪn"
+  },
+  {
+    "name": "merely",
+    "trans": ["仅仅", "只不过"],
+    "usphone": "ˈmɪrli",
+    "ukphone": "ˈmɪəli"
+  },
+  {
+    "name": "reusable",
+    "trans": ["可复用的", "可重复使用的"],
+    "usphone": "ˌriːˈjuːzəbl",
+    "ukphone": "ˌriːˈjuːzəbl"
+  },
+  {
+    "name": "sustains",
+    "trans": ["维持", "持续支撑", "保持"],
+    "usphone": "səˈsteɪnz",
+    "ukphone": "səˈsteɪnz"
+  },
+  {
+    "name": "stable",
+    "trans": ["稳定的", "稳固的"],
+    "usphone": "ˈsteɪbl",
+    "ukphone": "ˈsteɪbl"
+  },
+  {
+    "name": "reliably",
+    "trans": ["可靠地", "稳定地"],
+    "usphone": "rɪˈlaɪəbli",
+    "ukphone": "rɪˈlaɪəbli"
+  },
+  {
+    "name": "natural language",
+    "trans": ["自然语言"],
+    "usphone": "ˈnætʃrəl ˈlæŋɡwɪdʒ",
+    "ukphone": "ˈnætʃrəl ˈlæŋɡwɪdʒ"
+  },
+  {
+    "name": "algorithmically",
+    "trans": ["算法层面上地", "算法上"],
+    "usphone": "ˌælɡəˈrɪðmɪkli",
+    "ukphone": "ˌælɡəˈrɪðmɪkli"
+  },
+  {
+    "name": "trivial",
+    "trans": ["简单易处理的", "琐碎的"],
+    "usphone": "ˈtrɪviəl",
+    "ukphone": "ˈtrɪviəl"
+  },
+  {
+    "name": "unboundedly",
+    "trans": ["无限制地", "无限多地"],
+    "usphone": "ʌnˈbaʊndɪdli",
+    "ukphone": "ʌnˈbaʊndɪdli"
+  },
+  {
+    "name": "intrinsically",
+    "trans": ["本质上地", "固有地"],
+    "usphone": "ɪnˈtrɪnzɪkli",
+    "ukphone": "ɪnˈtrɪnzɪkli"
+  },
+  {
+    "name": "informative",
+    "trans": ["有效区分度的", "信息丰富的"],
+    "usphone": "ɪnˈfɔːrmətɪv",
+    "ukphone": "ɪnˈfɔːmətɪv"
+  },
+  {
+    "name": "synthetic data",
+    "trans": ["合成数据"],
+    "usphone": "sɪnˈθetɪk ˈdeɪtə",
+    "ukphone": "sɪnˈθetɪk ˈdeɪtə"
+  },
+  {
+    "name": "structurally",
+    "trans": ["结构层面上地", "在结构上"],
+    "usphone": "ˈstrʌktʃərəli",
+    "ukphone": "ˈstrʌktʃərəli"
+  },
+  {
+    "name": "reframes",
+    "trans": ["重新定义", "重构视角"],
+    "usphone": "ˌriːˈfreɪmz",
+    "ukphone": "ˌriːˈfreɪmz"
+  },
+  {
+    "name": "exhibit",
+    "trans": ["展现", "具备（特性）", "展示"],
+    "usphone": "ɪɡˈzɪbɪt",
+    "ukphone": "ɪɡˈzɪbɪt"
+  },
+  {
+    "name": "yields",
+    "trans": ["生成", "产出", "产生"],
+    "usphone": "jiːldz",
+    "ukphone": "jiːldz"
+  },
+  {
+    "name": "proposing",
+    "trans": ["生成（题目）", "提出"],
+    "usphone": "prəˈpoʊzɪŋ",
+    "ukphone": "prəˈpəʊzɪŋ"
+  },
+  {
+    "name": "gaming",
+    "trans": ["钻空子", "投机取巧"],
+    "usphone": "ˈɡeɪmɪŋ",
+    "ukphone": "ˈɡeɪmɪŋ"
+  },
+  {
+    "name": "admits",
+    "trans": ["采纳", "纳入", "接纳"],
+    "usphone": "ədˈmɪts",
+    "ukphone": "ədˈmɪts"
+  },
+  {
+    "name": "zero-data reasoning rl",
+    "trans": ["零数据推理强化学习"],
+    "usphone": "ˈzɪroʊ ˈdeɪtə ˈriːznɪŋ ˌɑːr ˈel",
+    "ukphone": "ˈzɪərəʊ ˈdeɪtə ˈriːznɪŋ ˌɑː ˈel"
+  },
+  {
+    "name": "solve-verify asymmetry",
+    "trans": ["求解-验证不对称性"],
+    "usphone": "sɑːlv ˈverɪfaɪ əˈsɪmətri",
+    "ukphone": "sɒlv ˈverɪfaɪ əˈsɪmətri"
+  },
+  {
+    "name": "single-policy",
+    "trans": ["单策略"],
+    "usphone": "ˈsɪŋɡl ˈpɑːləsi",
+    "ukphone": "ˈsɪŋɡl ˈpɒləsi"
+  },
+  {
+    "name": "python environments",
+    "trans": ["python运行环境"],
+    "usphone": "ˈpaɪθɑːn ɪnˈvaɪrənmənts",
+    "ukphone": "ˈpaɪθən ɪnˈvaɪrənmənts"
+  },
+  {
+    "name": "staged",
+    "trans": ["分阶段的", "分级的"],
+    "usphone": "steɪdʒd",
+    "ukphone": "steɪdʒd"
+  },
+  {
+    "name": "semantic",
+    "trans": ["语义的"],
+    "usphone": "səˈmæntɪk",
+    "ukphone": "sɪˈmæntɪk"
+  },
+  {
+    "name": "calibration",
+    "trans": ["校准", "标定"],
+    "usphone": "ˌkælɪˈbreɪʃn",
+    "ukphone": "ˌkælɪˈbreɪʃn"
+  },
+  {
+    "name": "hand-crafted",
+    "trans": ["人工制作的", "手工构建的"],
+    "usphone": "hænd ˈkræftɪd",
+    "ukphone": "hænd ˈkrɑːftɪd"
+  },
+  {
+    "name": "synthetic",
+    "trans": ["合成的", "人造的"],
+    "usphone": "sɪnˈθetɪk",
+    "ukphone": "sɪnˈθetɪk"
+  },
+  {
+    "name": "intrinsically hard",
+    "trans": ["本质上难以求解的"],
+    "usphone": "ɪnˈtrɪnzɪkli hɑːrd",
+    "ukphone": "ɪnˈtrɪnzɪkli hɑːd"
+  },
+  {
+    "name": "trivial as code",
+    "trans": ["代码层面简单易实现"],
+    "usphone": "ˈtrɪviəl æz koʊd",
+    "ukphone": "ˈtrɪviəl æz kəʊd"
+  },
+  {
+    "name": "unboundedly many",
+    "trans": ["无限多的"],
+    "usphone": "ʌnˈbaʊndɪdli ˈmeni",
+    "ukphone": "ʌnˈbaʊndɪdli ˈmeni"
+  },
+  {
+    "name": "durable gap",
+    "trans": ["稳定差距"],
+    "usphone": "ˈdʊrəbəl ɡæp",
+    "ukphone": "ˈdjʊərəbl ɡæp"
+  },
+  {
+    "name": "close the gap",
+    "trans": ["消除差距", "弥补差距"],
+    "usphone": "kloʊz ðə ɡæp",
+    "ukphone": "kləʊz ðə ɡæp"
+  },
+  {
+    "name": "learner",
+    "trans": ["学习器", "学习者"],
+    "usphone": "ˈlɜːrnər",
+    "ukphone": "ˈlɜːnə(r)"
+  },
+  {
+    "name": "synthesizes",
+    "trans": ["合成", "生成"],
+    "usphone": "ˈsɪnθəsaɪzɪz",
+    "ukphone": "ˈsɪnθəsaɪzɪz"
+  },
+  {
+    "name": "semantic self-review",
+    "trans": ["语义自审"],
+    "usphone": "səˈmæntɪk self rɪˈvjuː",
+    "ukphone": "sɪˈmæntɪk self rɪˈvjuː"
+  },
+  {
+    "name": "difficulty calibration",
+    "trans": ["难度校准"],
+    "usphone": "ˈdɪfɪkəlti ˌkælɪˈbreɪʃn",
+    "ukphone": "ˈdɪfɪkəlti ˌkælɪˈbreɪʃn"
+  },
+  {
+    "name": "fixed public-data",
+    "trans": ["固定公开数据集"],
+    "usphone": "fɪkst ˈpʌblɪk ˈdeɪtə",
+    "ukphone": "fɪkst ˈpʌblɪk ˈdeɪtə"
+  },
+  {
+    "name": "hand-crafted environment",
+    "trans": ["人工构建环境"],
+    "usphone": "hænd ˈkræftɪd ɪnˈvaɪrənmənt",
+    "ukphone": "hænd ˈkrɑːftɪd ɪnˈvaɪrənmənt"
+  },
+  {
+    "name": "relative gain",
+    "trans": ["相对增益", "相对提升"],
+    "usphone": "ˈrelətɪv ɡeɪn",
+    "ukphone": "ˈrelətɪv ɡeɪn"
+  },
+  {
+    "name": "structurally beyond reach",
+    "trans": ["结构上超出能力范围"],
+    "usphone": "ˈstrʌktʃərəli bɪˈjɑːnd riːtʃ",
+    "ukphone": "ˈstrʌktʃərəli bɪˈjɒnd riːtʃ"
+  },
+  {
+    "name": "self-improving",
+    "trans": ["自进化的", "自提升的"],
+    "usphone": "self ɪmˈpruːvɪŋ",
+    "ukphone": "self ɪmˈpruːvɪŋ"
+  },
+  {
+    "name": "data-generation loop",
+    "trans": ["数据生成循环"],
+    "usphone": "ˈdeɪtə ˌdʒenəˈreɪʃn luːp",
+    "ukphone": "ˈdeɪtə ˌdʒenəˈreɪʃn luːp"
+  },
+  {
+    "name": "environment-construction loop",
+    "trans": ["环境构建循环"],
+    "usphone": "ɪnˈvaɪrənmənt kənˈstrʌkʃn luːp",
+    "ukphone": "ɪnˈvaɪrənmənt kənˈstrʌkʃn luːp"
+  },
+  {
+    "name": "complementary forms",
+    "trans": ["互补形式"],
+    "usphone": "ˌkɑːmplɪˈmentri fɔːrmz",
+    "ukphone": "ˌkɒmplɪˈmentri fɔːmz"
+  },
+  {
+    "name": "planted subset-sum",
+    "trans": ["植入子集和问题"],
+    "usphone": "ˈplæntɪd ˈsʌbset sʌm",
+    "ukphone": "ˈplɑːntɪd ˈsʌbset sʌm"
+  },
+  {
+    "name": "proposing and solving",
+    "trans": ["生成题目与求解"],
+    "usphone": "prəˈpoʊzɪŋ ənd ˈsɑːlvɪŋ",
+    "ukphone": "prəˈpəʊzɪŋ ənd ˈsɒlvɪŋ"
+  },
+  {
+    "name": "gaming the verifier",
+    "trans": ["钻验证器漏洞"],
+    "usphone": "ˈɡeɪmɪŋ ðə ˈverɪfaɪər",
+    "ukphone": "ˈɡeɪmɪŋ ðə ˈverɪfaɪə"
+  },
+  {
+    "name": "reward informative",
+    "trans": ["有效奖励信号"],
+    "usphone": "rɪˈwɔːrd ɪnˈfɔːrmətɪv",
+    "ukphone": "rɪˈwɔːd ɪnˈfɔːmətɪv"
+  },
+  {
+    "name": "staged validation",
+    "trans": ["分阶段验证"],
+    "usphone": "steɪdʒd ˌvæləˈdeɪʃn",
+    "ukphone": "steɪdʒd ˌvælɪˈdeɪʃn"
+  },
+  {
+    "name": "novelty checks",
+    "trans": ["新颖性检测"],
+    "usphone": "ˈnɑːvəlti tʃeks",
+    "ukphone": "ˈnɒvəlti tʃeks"
+  },
+  {
+    "name": "average score",
+    "trans": ["平均分"],
+    "usphone": "ˈævərɪdʒ skɔːr",
+    "ukphone": "ˈævərɪdʒ skɔː"
+  },
+  {
+    "name": "stable self-improvement",
+    "trans": ["稳定自提升"],
+    "usphone": "ˈsteɪbl self ɪmˈpruːvmənt",
+    "ukphone": "ˈsteɪbl self ɪmˈpruːvmənt"
+  },
+  {
+    "name": "synthetic data",
+    "trans": ["合成数据"],
+    "usphone": "sɪnˈθetɪk ˈdeɪtə",
+    "ukphone": "sɪnˈθetɪk ˈdeɪtə"
+  },
+  {
+    "name": "structurally beyond their own reach",
+    "trans": ["结构上超出自身能力上限"],
+    "usphone": "ˈstrʌktʃərəli bɪˈjɑːnd ðer oʊn riːtʃ",
+    "ukphone": "ˈstrʌktʃərəli bɪˈjɒnd ðeə əʊn riːtʃ"
+  }
+]
+
+[
+  {
+    "name": "merely",
+    "trans": ["仅仅", "只不过"],
+    "usphone": "ˈmɪrli",
+    "ukphone": "ˈmɪəli"
+  },
+  {
+    "name": "zero-data",
+    "trans": ["零数据的"],
+    "usphone": "ˈzɪroʊ ˈdeɪtə",
+    "ukphone": "ˈzɪərəʊ ˈdeɪtə"
+  },
+  {
+    "name": "hinges",
+    "trans": ["取决于", "依靠", "铰链"],
+    "usphone": "ˈhɪndʒɪz",
+    "ukphone": "ˈhɪndʒɪz"
+  },
+  {
+    "name": "compiled",
+    "trans": ["编译后的", "汇编"],
+    "usphone": "kəmˈpaɪld",
+    "ukphone": "kəmˈpaɪld"
+  }
+]
+
+[
+  {
+    "name": "validated",
+    "trans": ["验证过的", "校验完成的"],
+    "usphone": "ˈvælɪdeɪtɪd",
+    "ukphone": "ˈvælɪdeɪtɪd"
+  },
+  {
+    "name": "compile-once",
+    "trans": ["一次编译"],
+    "usphone": "kəmˈpaɪl wʌns",
+    "ukphone": "kəmˈpaɪl wʌns"
+  },
+  {
+    "name": "solve-many",
+    "trans": ["多次求解"],
+    "usphone": "sɑːlv ˈmeni",
+    "ukphone": "sɒlv ˈmeni"
+  },
+  {
+    "name": "claim",
+    "trans": ["主张", "论点", "断言"],
+    "usphone": "kleɪm",
+    "ukphone": "kleɪm"
+  }
+]
+
+[
+  {
+    "name": "external",
+    "trans": ["外部的", "外置的"],
+    "usphone": "ɪkˈstɜːrnl",
+    "ukphone": "ɪkˈstɜːnl"
+  },
+  {
+    "name": "stateful",
+    "trans": ["有状态的"],
+    "usphone": "ˈsteɪtfəl",
+    "ukphone": "ˈsteɪtfəl"
+  },
+  {
+    "name": "broader",
+    "trans": ["更广泛的", "更广范围的"],
+    "usphone": "ˈbrɔːdər",
+    "ukphone": "ˈbrɔːdə"
+  },
+  {
+    "name": "unified",
+    "trans": ["统一的", "一体化的"],
+    "usphone": "ˈjuːnɪfaɪd",
+    "ukphone": "ˈjuːnɪfaɪd"
+  },
+  {
+    "name": "principled",
+    "trans": ["有原则的", "基于理论的"],
+    "usphone": "ˈprɪnsəpəld",
+    "ukphone": "ˈprɪnsəpəld"
+  },
+  {
+    "name": "mechanisms",
+    "trans": ["机制", "机理"],
+    "usphone": "ˈmekənɪzəmz",
+    "ukphone": "ˈmekənɪzəmz"
+  },
+  {
+    "name": "verifiable",
+    "trans": ["可验证的", "可核验的"],
+    "usphone": "ˈverɪfaɪəbl",
+    "ukphone": "ˈverɪfaɪəbl"
+  },
+  {
+    "name": "co-evolution",
+    "trans": ["协同进化", "共同演化"],
+    "usphone": "ˌkoʊ ˌevəˈluːʃn",
+    "ukphone": "ˌkəʊ ˌiːvəˈluːʃn"
+  },
+  {
+    "name": "consistently",
+    "trans": ["持续地", "一致地", "始终"],
+    "usphone": "kənˈsɪstəntli",
+    "ukphone": "kənˈsɪstəntli"
+  },
+  {
+    "name": "proprietary",
+    "trans": ["专有", "私有", "闭源的"],
+    "usphone": "prəˈpraɪəteri",
+    "ukphone": "prəˈpraɪətri"
+  },
+  {
+    "name": "further",
+    "trans": ["进一步的", "更多的"],
+    "usphone": "ˈfɜːrðər",
+    "ukphone": "ˈfɜːðə"
+  },
+  {
+    "name": "reveal",
+    "trans": ["揭示", "展现", "显示"],
+    "usphone": "rɪˈviːl",
+    "ukphone": "rɪˈviːl"
+  },
+  {
+    "name": "insights",
+    "trans": ["见解", "洞见", "启发"],
+    "usphone": "ˈɪnsaɪts",
+    "ukphone": "ˈɪnsaɪts"
+  }
+]
+
+[
+  {
+    "name": "frontier",
+    "trans": ["前沿", "边界", "尖端领域"],
+    "usphone": "frʌnˈtɪr",
+    "ukphone": "ˈfrʌntɪə(r)"
+  },
+  {
+    "name": "expectations",
+    "trans": ["期望", "预期"],
+    "usphone": "ˌekspekˈteɪʃnz",
+    "ukphone": "ˌekspekˈteɪʃnz"
+  },
+  {
+    "name": "chat-oriented",
+    "trans": ["面向对话的", "聊天导向的"],
+    "usphone": "tʃæt ˈɔːrientɪd",
+    "ukphone": "tʃæt ˈɔːrientɪd"
+  },
+  {
+    "name": "general-purpose",
+    "trans": ["通用的", "多用途的"],
+    "usphone": "ˈdʒenrəl ˈpɜːrpəs",
+    "ukphone": "ˈdʒenrəl ˈpɜːpəs"
+  },
+  {
+    "name": "ideally",
+    "trans": ["理想情况下", "最好地"],
+    "usphone": "aɪˈdiːəli",
+    "ukphone": "aɪˈdiːəli"
+  },
+  {
+    "name": "seamlessly",
+    "trans": ["无缝地", "无间断地"],
+    "usphone": "ˈsiːmləsli",
+    "ukphone": "ˈsiːmləsli"
+  },
+  {
+    "name": "integrate",
+    "trans": ["整合", "集成", "融合"],
+    "usphone": "ˈɪntɪɡreɪt",
+    "ukphone": "ˈɪntɪɡreɪt"
+  },
+  {
+    "name": "interaction",
+    "trans": ["交互", "互动"],
+    "usphone": "ˌɪntərˈækʃn",
+    "ukphone": "ˌɪntərˈækʃn"
+  },
+  {
+    "name": "verbal",
+    "trans": ["语言的", "文字的", "口头的"],
+    "usphone": "ˈvɜːrbl",
+    "ukphone": "ˈvɜːbl"
+  },
+  {
+    "name": "continuously",
+    "trans": ["持续地", "不断地"],
+    "usphone": "kənˈtɪnjuəsli",
+    "ukphone": "kənˈtɪnjuəsli"
+  },
+  {
+    "name": "realizing",
+    "trans": ["实现", "达成", "意识到"],
+    "usphone": "ˈriːəlaɪzɪŋ",
+    "ukphone": "ˈriːəlaɪzɪŋ"
+  },
+  {
+    "name": "agentic",
+    "trans": ["智能体的", "代理式的"],
+    "usphone": "eɪˈdʒentɪk",
+    "ukphone": "eɪˈdʒentɪk"
+  },
+  {
+    "name": "equipping",
+    "trans": ["配备", "装备"],
+    "usphone": "ɪˈkwɪpɪŋ",
+    "ukphone": "ɪˈkwɪpɪŋ"
+  },
+  {
+    "name": "executable",
+    "trans": ["可执行的"],
+    "usphone": "ɪɡˈzekjətəbl",
+    "ukphone": "ɪɡˈzekjətəbl"
+  },
+  {
+    "name": "basis",
+    "trans": ["基础", "依据"],
+    "usphone": "ˈbeɪsɪs",
+    "ukphone": "ˈbeɪsɪs"
+  },
+  {
+    "name": "demonstrated",
+    "trans": ["证明", "展示", "体现"],
+    "usphone": "ˈdemənstreɪtɪd",
+    "ukphone": "ˈdemənstreɪtɪd"
+  },
+  {
+    "name": "practical",
+    "trans": ["实用的", "实际的"],
+    "usphone": "ˈpræktɪkl",
+    "ukphone": "ˈpræktɪkl"
+  }
+]
+
+[
+  {
+    "name": "inherently",
+    "trans": ["本质上地", "固有地"],
+    "usphone": "ɪnˈhɪrəntli",
+    "ukphone": "ɪnˈhɪərəntli"
+  },
+  {
+    "name": "compositional",
+    "trans": ["组合式的", "可组合的"],
+    "usphone": "ˌkɑːmpəˈzɪʃənl",
+    "ukphone": "ˌkɒmpəˈzɪʃənl"
+  },
+  {
+    "name": "valid",
+    "trans": ["有效的", "合规的"],
+    "usphone": "ˈvælɪd",
+    "ukphone": "ˈvælɪd"
+  },
+  {
+    "name": "inventory",
+    "trans": ["库存", "清单"],
+    "usphone": "ˈɪnvəntɔːri",
+    "ukphone": "ˈɪnvəntri"
+  },
+  {
+    "name": "modifies",
+    "trans": ["修改", "变更"],
+    "usphone": "ˈmɑːdɪfaɪz",
+    "ukphone": "ˈmɒdɪfaɪz"
+  },
+  {
+    "name": "underlying",
+    "trans": ["底层的", "基础的"],
+    "usphone": "ˌʌndərˈlaɪɪŋ",
+    "ukphone": "ˌʌndəˈlaɪɪŋ"
+  },
+  {
+    "name": "consequently",
+    "trans": ["因此", "所以"],
+    "usphone": "ˈkɑːnsɪkwentli",
+    "ukphone": "ˈkɒnsɪkwəntli"
+  },
+  {
+    "name": "orchestrate",
+    "trans": ["编排", "协调调度"],
+    "usphone": "ˈɔːrkɪstreɪt",
+    "ukphone": "ˈɔːkɪstreɪt"
+  },
+  {
+    "name": "induced",
+    "trans": ["引发的", "诱导产生的"],
+    "usphone": "ɪnˈduːst",
+    "ukphone": "ɪnˈdjuːst"
+  },
+  {
+    "name": "insufficient",
+    "trans": ["不足的", "不够充分的"],
+    "usphone": "ˌɪnsəˈfɪʃnt",
+    "ukphone": "ˌɪnsəˈfɪʃnt"
+  },
+  {
+    "name": "implicit",
+    "trans": ["隐式的", "隐含的"],
+    "usphone": "ɪmˈplɪsɪt",
+    "ukphone": "ɪmˈplɪsɪt"
+  },
+  {
+    "name": "textual",
+    "trans": ["文本的", "文字层面的"],
+    "usphone": "ˈtekstʃuəl",
+    "ukphone": "ˈtekstʃuəl"
+  },
+  {
+    "name": "vulnerable",
+    "trans": ["易受影响的", "存在缺陷的"],
+    "usphone": "ˈvʌlnərəbl",
+    "ukphone": "ˈvʌlnərəbl"
+  },
+  {
+    "name": "hallucinations",
+    "trans": ["幻觉输出", "模型虚构内容"],
+    "usphone": "həˌluːsəˈneɪʃnz",
+    "ukphone": "həˌluːsɪˈneɪʃnz"
+  },
+  {
+    "name": "grounding",
+    "trans": ["现实锚定", "落地依据"],
+    "usphone": "ˈɡraʊndɪŋ",
+    "ukphone": "ˈɡraʊndɪŋ"
+  },
+  {
+    "name": "synthesizing",
+    "trans": ["合成", "生成"],
+    "usphone": "ˈsɪnθəsaɪzɪŋ",
+    "ukphone": "ˈsɪnθɪsaɪzɪŋ"
+  },
+  {
+    "name": "programmatic",
+    "trans": ["程序化的", "代码式的"],
+    "usphone": "ˌproʊɡrəˈmætɪk",
+    "ukphone": "ˌprəʊɡrəˈmætɪk"
+  },
+  {
+    "name": "acquire",
+    "trans": ["习得", "获取"],
+    "usphone": "əˈkwaɪər",
+    "ukphone": "əˈkwaɪə"
+  },
+  {
+    "name": "robust",
+    "trans": ["鲁棒的", "稳定可靠的"],
+    "usphone": "roʊˈbʌst",
+    "ukphone": "rəʊˈbʌst"
+  },
+  {
+    "name": "transferable",
+    "trans": ["可迁移的", "可泛化的"],
+    "usphone": "trænsˈfɜːrəbl",
+    "ukphone": "trænsˈfɜːrəbl"
+  },
+  {
+    "name": "construction",
+    "trans": ["构建", "搭建"],
+    "usphone": "kənˈstrʌkʃn",
+    "ukphone": "kənˈstrʌkʃn"
+  },
+  {
+    "name": "bottlenecks",
+    "trans": ["瓶颈", "阻碍因素"],
+    "usphone": "ˈbɑːtlnekz",
+    "ukphone": "ˈbɒtlnekz"
+  }
+]
+
+[
+  {
+    "name": "purely",
+    "trans": ["纯粹地", "完全地"],
+    "usphone": "ˈpjʊrli",
+    "ukphone": "ˈpjʊəli"
+  },
+  {
+    "name": "derived",
+    "trans": ["衍生的", "源自的"],
+    "usphone": "dɪˈraɪvd",
+    "ukphone": "dɪˈraɪvd"
+  },
+  {
+    "name": "mismatch",
+    "trans": ["不匹配", "不符"],
+    "usphone": "ˌmɪsˈmætʃ",
+    "ukphone": "ˌmɪsˈmætʃ"
+  },
+  {
+    "name": "restricting",
+    "trans": ["限制", "约束"],
+    "usphone": "rɪˈstrɪktɪŋ",
+    "ukphone": "rɪˈstrɪktɪŋ"
+  },
+  {
+    "name": "long-horizon",
+    "trans": ["长时序的", "长期规划的"],
+    "usphone": "lɔːŋ həˈraɪzn",
+    "ukphone": "lɒŋ həˈraɪzn"
+  },
+  {
+    "name": "state-intensive",
+    "trans": ["高状态密集型的"],
+    "usphone": "steɪt ɪnˈtensɪv",
+    "ukphone": "steɪt ɪnˈtensɪv"
+  },
+  {
+    "name": "mechanisms",
+    "trans": ["机制", "运行机理"],
+    "usphone": "ˈmekənɪzəmz",
+    "ukphone": "ˈmekənɪzəmz"
+  },
+  {
+    "name": "primarily",
+    "trans": ["主要地", "首要地"],
+    "usphone": "ˈpraɪmerəli",
+    "ukphone": "ˈpraɪmərəli"
+  },
+  {
+    "name": "emphasized",
+    "trans": ["强调", "着重关注"],
+    "usphone": "ˈemfəsaɪzd",
+    "ukphone": "ˈemfəsaɪzd"
+  },
+  {
+    "name": "construction",
+    "trans": ["构建", "搭建"],
+    "usphone": "kənˈstrʌkʃn",
+    "ukphone": "kənˈstrʌkʃn"
+  },
+  {
+    "name": "unresolved",
+    "trans": ["未解决的", "悬而未决的"],
+    "usphone": "ˌʌnrɪˈzɑːlvd",
+    "ukphone": "ˌʌnrɪˈzɒlvd"
+  }
+]
+
+[
+  {
+    "name": "principled",
+    "trans": ["有理论依据的", "规范化的"],
+    "usphone": "ˈprɪnsəpəld",
+    "ukphone": "ˈprɪnsəpəld"
+  },
+  {
+    "name": "mechanisms",
+    "trans": ["机制", "运行机理"],
+    "usphone": "ˈmekənɪzəmz",
+    "ukphone": "ˈmekənɪzəmz"
+  },
+  {
+    "name": "arena",
+    "trans": ["训练平台", "竞技场"],
+    "usphone": "əˈriːnə",
+    "ukphone": "əˈriːnə"
+  },
+  {
+    "name": "unifies",
+    "trans": ["统一", "整合"],
+    "usphone": "ˈjuːnɪfaɪz",
+    "ukphone": "ˈjuːnɪfaɪz"
+  },
+  {
+    "name": "mines",
+    "trans": ["挖掘", "提取"],
+    "usphone": "maɪnz",
+    "ukphone": "maɪnz"
+  },
+  {
+    "name": "ecosystem",
+    "trans": ["生态系统"],
+    "usphone": "ˈiːkoʊˌsɪstəm",
+    "ukphone": "ˈiːkəʊˌsɪstəm"
+  },
+  {
+    "name": "generation",
+    "trans": ["生成", "产出"],
+    "usphone": "ˌdʒenəˈreɪʃn",
+    "ukphone": "ˌdʒenəˈreɪʃn"
+  },
+  {
+    "name": "expand task difficulty",
+    "trans": ["提升任务难度"],
+    "usphone": "ɪkˈspænd tæsk ˈdɪfɪkəlti",
+    "ukphone": "ɪkˈspænd tɑːsk ˈdɪfɪkəlti"
+  },
+  {
+    "name": "rollouts",
+    "trans": ["交互轨迹", "推演样本"],
+    "usphone": "ˈroʊlaʊts",
+    "ukphone": "ˈrəʊlaʊts"
+  },
+  {
+    "name": "notably",
+    "trans": ["值得注意的是", "显著地"],
+    "usphone": "ˈnoʊtəbli",
+    "ukphone": "ˈnəʊtəbli"
+  },
+  {
+    "name": "iteratively",
+    "trans": ["迭代地", "反复循环地"],
+    "usphone": "ˈɪtərətɪvli",
+    "ukphone": "ˈɪtərətɪvli"
+  },
+  {
+    "name": "gaps",
+    "trans": ["短板", "差距", "缺口"],
+    "usphone": "ɡæps",
+    "ukphone": "ɡæps"
+  },
+  {
+    "name": "targeted learning",
+    "trans": ["针对性学习"],
+    "usphone": "ˈtɑːrɡɪtɪd ˈlɜːrnɪŋ",
+    "ukphone": "ˈtɑːɡɪtɪd ˈlɜːnɪŋ"
+  },
+  {
+    "name": "conduct",
+    "trans": ["开展", "实施"],
+    "usphone": "kənˈdʌkt",
+    "ukphone": "kənˈdʌkt"
+  },
+  {
+    "name": "comprehensive",
+    "trans": ["全面的", "综合的"],
+    "usphone": "ˌkɑːmprɪˈhensɪv",
+    "ukphone": "ˌkɒmprɪˈhensɪv"
+  },
+  {
+    "name": "outperforms",
+    "trans": ["优于", "性能超过"],
+    "usphone": "ˌaʊtpərˈfɔːrmz",
+    "ukphone": "ˌaʊtpəˈfɔːmz"
+  },
+  {
+    "name": "empirical",
+    "trans": ["实证的", "基于实验的"],
+    "usphone": "ɪmˈpɪrɪkl",
+    "ukphone": "ɪmˈpɪrɪkl"
+  },
+  {
+    "name": "insights",
+    "trans": ["洞见", "研究启发"],
+    "usphone": "ˈɪnsaɪts",
+    "ukphone": "ˈɪnsaɪts"
+  }
+]
+
+[
+  {
+    "name": "mines",
+    "trans": ["挖掘", "提取"],
+    "usphone": "maɪnz",
+    "ukphone": "maɪnz"
+  },
+  {
+    "name": "integrates",
+    "trans": ["整合", "融合", "集成"],
+    "usphone": "ˈɪntɪɡreɪts",
+    "ukphone": "ˈɪntɪɡreɪts"
+  },
+  {
+    "name": "agent benchmarks",
+    "trans": ["智能体基准测试集"],
+    "usphone": "ˈeɪdʒənt ˈbentʃmɑːrks",
+    "ukphone": "ˈeɪdʒənt ˈbentʃmɑːks"
+  },
+  {
+    "name": "demonstrate",
+    "trans": ["证明", "展示", "验证"],
+    "usphone": "ˈdemənstreɪt",
+    "ukphone": "ˈdemənstreɪt"
+  },
+  {
+    "name": "superior",
+    "trans": ["更优异的", "优越的"],
+    "usphone": "suːˈpɪriər",
+    "ukphone": "suːˈpɪəriə(r)"
+  },
+  {
+    "name": "environment diversity",
+    "trans": ["环境多样性"],
+    "usphone": "ɪnˈvaɪrənmənt daɪˈvɜːrsəti",
+    "ukphone": "ɪnˈvaɪrənmənt daɪˈvɜːsəti"
+  },
+  {
+    "name": "performance",
+    "trans": ["性能", "表现"],
+    "usphone": "pərˈfɔːrməns",
+    "ukphone": "pəˈfɔːməns"
+  },
+  {
+    "name": "represented",
+    "trans": ["表示", "代表", "刻画"],
+    "usphone": "ˌreprɪˈzentɪd",
+    "ukphone": "ˌreprɪˈzentɪd"
+  },
+  {
+    "name": "dialogue",
+    "trans": ["对话", "会话"],
+    "usphone": "ˈdaɪəlɔːɡ",
+    "ukphone": "ˈdaɪəlɒɡ"
+  },
+  {
+    "name": "conversational",
+    "trans": ["会话的", "对话式的"],
+    "usphone": "ˌkɑːnvərˈseɪʃənl",
+    "ukphone": "ˌkɒnvəˈseɪʃənl"
+  }
+]
+
+[
+  {
+    "name": "unifies",
+    "trans": ["统一", "整合"],
+    "usphone": "ˈjuːnɪfaɪz",
+    "ukphone": "ˈjuːnɪfaɪz"
+  },
+  {
+    "name": "tightly",
+    "trans": ["紧密地", "严密地"],
+    "usphone": "ˈtaɪtli",
+    "ukphone": "ˈtaɪtli"
+  },
+  {
+    "name": "mines",
+    "trans": ["挖掘", "提取"],
+    "usphone": "maɪnz",
+    "ukphone": "maɪnz"
+  },
+  {
+    "name": "topic-aligned",
+    "trans": ["主题对齐的", "贴合主题的"],
+    "usphone": "ˈtɑːpɪk əˈlaɪnd",
+    "ukphone": "ˈtɒpɪk əˈlaɪnd"
+  },
+  {
+    "name": "databases",
+    "trans": ["数据库"],
+    "usphone": "ˈdeɪtəbeɪsɪz",
+    "ukphone": "ˈdeɪtəbeɪsɪz"
+  },
+  {
+    "name": "expansion",
+    "trans": ["扩充", "拓展"],
+    "usphone": "ɪkˈspænʃn",
+    "ukphone": "ɪkˈspænʃn"
+  },
+  {
+    "name": "anchors",
+    "trans": ["锚点", "基准"],
+    "usphone": "ˈæŋkərz",
+    "ukphone": "ˈæŋkəz"
+  },
+  {
+    "name": "systematically",
+    "trans": ["系统地", "有条理地"],
+    "usphone": "ˌsɪstəˈmætɪkli",
+    "ukphone": "ˌsɪstəˈmætɪkli"
+  },
+  {
+    "name": "explicitly",
+    "trans": ["明确地", "显式地"],
+    "usphone": "ɪkˈsplɪsɪtli",
+    "ukphone": "ɪkˈsplɪsɪtli"
+  }
+]
+
+[
+  {
+    "name": "verify",
+    "trans": ["验证", "核验"],
+    "usphone": "ˈverɪfaɪ",
+    "ukphone": "ˈverɪfaɪ"
+  },
+  {
+    "name": "specifications",
+    "trans": ["规范", "规格说明", "技术文档"],
+    "usphone": "ˌspesɪfɪˈkeɪʃnz",
+    "ukphone": "ˌspesɪfɪˈkeɪʃnz"
+  },
+  {
+    "name": "accompanied",
+    "trans": ["附带", "伴随"],
+    "usphone": "əˈkʌmpənid",
+    "ukphone": "əˈkʌmpənid"
+  },
+  {
+    "name": "corresponding",
+    "trans": ["对应的", "相关的"],
+    "usphone": "ˌkɔːrəˈspɑːndɪŋ",
+    "ukphone": "ˌkɒrəˈspɒndɪŋ"
+  },
+  {
+    "name": "inversely",
+    "trans": ["反向地", "逆向地"],
+    "usphone": "ˈɪnvɜːrsli",
+    "ukphone": "ˈɪnvɜːsli"
+  },
+  {
+    "name": "domain",
+    "trans": ["领域", "业务域"],
+    "usphone": "doʊˈmeɪn",
+    "ukphone": "dəˈmeɪn"
+  },
+  {
+    "name": "anchors",
+    "trans": ["锚点", "基准"],
+    "usphone": "ˈæŋkərz",
+    "ukphone": "ˈæŋkəz"
+  },
+  {
+    "name": "abundant",
+    "trans": ["丰富的", "大量的"],
+    "usphone": "əˈbʌndənt",
+    "ukphone": "əˈbʌndənt"
+  },
+  {
+    "name": "argue",
+    "trans": ["认为", "主张", "论证"],
+    "usphone": "ˈɑːrɡjuː",
+    "ukphone": "ˈɑːɡjuː"
+  },
+  {
+    "name": "concretely",
+    "trans": ["具体来说", "切实地"],
+    "usphone": "kənˈkriːtli",
+    "ukphone": "ˈkɒŋkriːtli"
+  },
+  {
+    "name": "iterative",
+    "trans": ["迭代的", "循环往复的"],
+    "usphone": "ˈɪtərətɪv",
+    "ukphone": "ˈɪtərətɪv"
+  },
+  {
+    "name": "retrieval",
+    "trans": ["检索", "信息提取"],
+    "usphone": "rɪˈtriːvl",
+    "ukphone": "rɪˈtriːvl"
+  },
+  {
+    "name": "leverages",
+    "trans": ["利用", "借助"],
+    "usphone": "ˈlevərɪdʒɪz",
+    "ukphone": "ˈlevərɪdʒɪz"
+  },
+  {
+    "name": "structuring",
+    "trans": ["结构化处理", "构建结构"],
+    "usphone": "ˈstrʌktʃərɪŋ",
+    "ukphone": "ˈstrʌktʃərɪŋ"
+  },
+  {
+    "name": "persistent",
+    "trans": ["持久的", "持续存储的"],
+    "usphone": "pərˈsɪstənt",
+    "ukphone": "pəˈsɪstənt"
+  },
+  {
+    "name": "yielding",
+    "trans": ["生成", "产出"],
+    "usphone": "ˈjiːldɪŋ",
+    "ukphone": "ˈjiːldɪŋ"
+  },
+  {
+    "name": "empirically",
+    "trans": ["从实验上", "凭经验实证地"],
+    "usphone": "ɪmˈpɪrɪkli",
+    "ukphone": "ɪmˈpɪrɪkli"
+  },
+  {
+    "name": "complexification",
+    "trans": ["复杂化处理", "复杂度提升"],
+    "usphone": "kəmˌpleksɪfɪˈkeɪʃn",
+    "ukphone": "kəmˌpleksɪfɪˈkeɪʃn"
+  },
+  {
+    "name": "iteratively",
+    "trans": ["迭代地", "反复循环地"],
+    "usphone": "ˈɪtərətɪvli",
+    "ukphone": "ˈɪtərətɪvli"
+  },
+  {
+    "name": "enrich",
+    "trans": ["丰富", "扩充完善"],
+    "usphone": "ɪnˈrɪtʃ",
+    "ukphone": "ɪnˈrɪtʃ"
+  }
+]
+
+[
+  {
+    "name": "generation",
+    "trans": ["生成", "产出"],
+    "usphone": "ˌdʒenəˈreɪʃn",
+    "ukphone": "ˌdʒenəˈreɪʃn"
+  },
+  {
+    "name": "verification",
+    "trans": ["验证", "核验", "校验流程"],
+    "usphone": "ˌverɪfɪˈkeɪʃn",
+    "ukphone": "ˌverɪfɪˈkeɪʃn"
+  },
+  {
+    "name": "construct",
+    "trans": ["构建", "搭建"],
+    "usphone": "kənˈstrʌkt",
+    "ukphone": "kənˈstrʌkt"
+  },
+  {
+    "name": "grounded",
+    "trans": ["基于……的", "锚定现实的"],
+    "usphone": "ˈɡraʊndɪd",
+    "ukphone": "ˈɡraʊndɪd"
+  },
+  {
+    "name": "executable",
+    "trans": ["可执行的"],
+    "usphone": "ɪɡˈzekjətəbl",
+    "ukphone": "ɪɡˈzekjətəbl"
+  },
+  {
+    "name": "compiler",
+    "trans": ["编译器"],
+    "usphone": "kəmˈpaɪlər",
+    "ukphone": "kəmˈpaɪlə(r)"
+  },
+  {
+    "name": "candidate",
+    "trans": ["候选的", "备选"],
+    "usphone": "ˈkændɪdət",
+    "ukphone": "ˈkændɪdət"
+  }
+]
+
+[
+  {
+    "name": "hierarchical",
+    "trans": ["分层的", "层级式的"],
+    "usphone": "ˌhaɪəˈrɑːrkɪkl",
+    "ukphone": "ˌhaɪəˈrɑːkɪkl"
+  },
+  {
+    "name": "taxonomy",
+    "trans": ["分类体系", "分类法"],
+    "usphone": "tækˈsɑːnəmi",
+    "ukphone": "tækˈsɒnəmi"
+  },
+  {
+    "name": "corresponding",
+    "trans": ["对应的", "相应的"],
+    "usphone": "ˌkɔːrəˈspɑːndɪŋ",
+    "ukphone": "ˌkɒrəˈspɒndɪŋ"
+  },
+  {
+    "name": "valid",
+    "trans": ["有效的", "合规可用的"],
+    "usphone": "ˈvælɪd",
+    "ukphone": "ˈvælɪd"
+  },
+  {
+    "name": "clustering",
+    "trans": ["聚类", "集群划分"],
+    "usphone": "ˈklʌstərɪŋ",
+    "ukphone": "ˈklʌstərɪŋ"
+  },
+  {
+    "name": "representative",
+    "trans": ["代表性的", "典型的"],
+    "usphone": "ˌreprɪˈzentətɪv",
+    "ukphone": "ˌreprɪˈzentətɪv"
+  },
+  {
+    "name": "supervised",
+    "trans": ["有监督的"],
+    "usphone": "ˈsuːpərvaɪzd",
+    "ukphone": "ˈsuːpəvaɪzd"
+  },
+  {
+    "name": "summarization",
+    "trans": ["摘要生成", "概括"],
+    "usphone": "ˌsʌmərəˈzeɪʃn",
+    "ukphone": "ˌsʌməraɪˈzeɪʃn"
+  },
+  {
+    "name": "central",
+    "trans": ["核心的", "中心的"],
+    "usphone": "ˈsentrəl",
+    "ukphone": "ˈsentrəl"
+  },
+  {
+    "name": "solely",
+    "trans": ["仅仅", "单独地"],
+    "usphone": "ˈsoʊlli",
+    "ukphone": "ˈsəʊlli"
+  },
+  {
+    "name": "templated",
+    "trans": ["模板化的"],
+    "usphone": "ˈtempleɪtɪd",
+    "ukphone": "ˈtempleɪtɪd"
+  },
+  {
+    "name": "bias",
+    "trans": ["偏差", "偏见"],
+    "usphone": "ˈbaɪəs",
+    "ukphone": "ˈbaɪəs"
+  },
+  {
+    "name": "annotators",
+    "trans": ["标注员", "注释者"],
+    "usphone": "ˈænəteɪtərz",
+    "ukphone": "ˈænəteɪtəz"
+  },
+  {
+    "name": "abstract",
+    "trans": ["抽象归纳", "提炼"],
+    "usphone": "æbˈstrækt",
+    "ukphone": "æbˈstrækt"
+  },
+  {
+    "name": "cross-validation",
+    "trans": ["交叉验证"],
+    "usphone": "krɔːs ˌvæləˈdeɪʃn",
+    "ukphone": "krɒs ˌvælɪˈdeɪʃn"
+  },
+  {
+    "name": "yield",
+    "trans": ["生成", "产出"],
+    "usphone": "jiːld",
+    "ukphone": "jiːld"
+  },
+  {
+    "name": "stratified",
+    "trans": ["分层抽样的", "分层的"],
+    "usphone": "ˈstrætɪfaɪd",
+    "ukphone": "ˈstrætɪfaɪd"
+  },
+  {
+    "name": "reliable",
+    "trans": ["可靠的", "稳定可信的"],
+    "usphone": "rɪˈlaɪəbl",
+    "ukphone": "rɪˈlaɪəbl"
+  }
+]
+
+[
+  {
+    "name": "complementary",
+    "trans": ["互补的", "配套的"],
+    "usphone": "ˌkɑːmplɪˈmentri",
+    "ukphone": "ˌkɒmplɪˈmentri"
+  },
+  {
+    "name": "sequential",
+    "trans": ["顺序的", "时序的"],
+    "usphone": "sɪˈkwenʃl",
+    "ukphone": "sɪˈkwenʃl"
+  },
+  {
+    "name": "programmatic",
+    "trans": ["程序化的", "代码式的"],
+    "usphone": "ˌproʊɡrəˈmætɪk",
+    "ukphone": "ˌprəʊɡrəˈmætɪk"
+  },
+  {
+    "name": "preserve",
+    "trans": ["保留", "维持", "保证"],
+    "usphone": "prɪˈzɜːrv",
+    "ukphone": "prɪˈzɜːv"
+  },
+  {
+    "name": "invoke",
+    "trans": ["调用", "启用"],
+    "usphone": "ɪnˈvoʊk",
+    "ukphone": "ɪnˈvəʊk"
+  },
+  {
+    "name": "underlying",
+    "trans": ["底层的", "基础的"],
+    "usphone": "ˌʌndərˈlaɪɪŋ",
+    "ukphone": "ˌʌndəˈlaɪɪŋ"
+  },
+  {
+    "name": "insight",
+    "trans": ["见解", "洞察", "核心思路"],
+    "usphone": "ˈɪnsaɪt",
+    "ukphone": "ˈɪnsaɪt"
+  },
+  {
+    "name": "reverse-engineering",
+    "trans": ["逆向工程"],
+    "usphone": "rɪˈvɜːrs ˌendʒɪˈnɪrɪŋ",
+    "ukphone": "rɪˈvɜːs ˌendʒɪˈnɪərɪŋ"
+  },
+  {
+    "name": "paradigm",
+    "trans": ["范式", "模式"],
+    "usphone": "ˈpærədaɪm",
+    "ukphone": "ˈpærədaɪm"
+  },
+  {
+    "name": "corresponding",
+    "trans": ["对应的", "相应的"],
+    "usphone": "ˌkɔːrəˈspɑːndɪŋ",
+    "ukphone": "ˌkɒrəˈspɒndɪŋ"
+  },
+  {
+    "name": "rationality",
+    "trans": ["合理性", "逻辑性"],
+    "usphone": "ˌræʃəˈnæləti",
+    "ukphone": "ˌræʃəˈnæləti"
+  },
+  {
+    "name": "diversity",
+    "trans": ["多样性", "差异化"],
+    "usphone": "daɪˈvɜːrsəti",
+    "ukphone": "daɪˈvɜːsəti"
+  },
+  {
+    "name": "assigned",
+    "trans": ["分配", "赋值"],
+    "usphone": "əˈsaɪnd",
+    "ukphone": "əˈsaɪnd"
+  },
+  {
+    "name": "strictly",
+    "trans": ["严格地", "完全地"],
+    "usphone": "ˈstrɪktli",
+    "ukphone": "ˈstrɪktli"
+  },
+  {
+    "name": "derived",
+    "trans": ["推导得出", "源自"],
+    "usphone": "dɪˈraɪvd",
+    "ukphone": "dɪˈraɪvd"
+  },
+  {
+    "name": "preventing",
+    "trans": ["防止", "避免"],
+    "usphone": "prɪˈventɪŋ",
+    "ukphone": "prɪˈventɪŋ"
+  },
+  {
+    "name": "precursors",
+    "trans": ["前置工具", "前驱节点"],
+    "usphone": "prɪˈkɜːrsərz",
+    "ukphone": "prɪˈkɜːsəz"
+  },
+  {
+    "name": "biased",
+    "trans": ["带偏向的", "加权偏向的"],
+    "usphone": "ˈbaɪəst",
+    "ukphone": "ˈbaɪəst"
+  },
+  {
+    "name": "encouraging",
+    "trans": ["促成", "倾向生成"],
+    "usphone": "ɪnˈkɜːrɪdʒɪŋ",
+    "ukphone": "ɪnˈkʌrɪdʒɪŋ"
+  },
+  {
+    "name": "instantiate",
+    "trans": ["实例化", "赋值初始化"],
+    "usphone": "ɪnˈstænʃieɪt",
+    "ukphone": "ɪnˈstænʃieɪt"
+  },
+  {
+    "name": "preceding",
+    "trans": ["前序的", "前置的"],
+    "usphone": "prɪˈsiːdɪŋ",
+    "ukphone": "prɪˈsiːdɪŋ"
+  },
+  {
+    "name": "populated",
+    "trans": ["填充完成的", "已赋值的"],
+    "usphone": "ˈpɑːpjuleɪtɪd",
+    "ukphone": "ˈpɒpjuleɪtɪd"
+  },
+  {
+    "name": "chain",
+    "trans": ["链路", "工具调用链"],
+    "usphone": "tʃeɪn",
+    "ukphone": "tʃeɪn"
+  },
+  {
+    "name": "prune",
+    "trans": ["修剪", "删减冗余"],
+    "usphone": "pruːn",
+    "ukphone": "pruːn"
+  },
+  {
+    "name": "redundancies",
+    "trans": ["冗余内容", "多余步骤"],
+    "usphone": "rɪˈdʌndənsiz",
+    "ukphone": "rɪˈdʌndənsiz"
+  },
+  {
+    "name": "consistency",
+    "trans": ["一致性", "逻辑连贯"],
+    "usphone": "kənˈsɪstənsi",
+    "ukphone": "kənˈsɪstənsi"
+  },
+  {
+    "name": "refined",
+    "trans": ["优化后的", "精炼后的"],
+    "usphone": "rɪˈfaɪnd",
+    "ukphone": "rɪˈfaɪnd"
+  }
+]
+
+[
+  {
+    "name": "rubric",
+    "trans": ["评分标准", "评判细则"],
+    "usphone": "ˈruːbrɪk",
+    "ukphone": "ˈruːbrɪk"
+  },
+  {
+    "name": "drafts",
+    "trans": ["草拟", "起草初稿"],
+    "usphone": "dræfts",
+    "ukphone": "drɑːfts"
+  },
+  {
+    "name": "leakage",
+    "trans": ["泄露", "信息泄漏"],
+    "usphone": "ˈliːkɪdʒ",
+    "ukphone": "ˈliːkɪdʒ"
+  },
+  {
+    "name": "prohibited",
+    "trans": ["禁止的", "严禁"],
+    "usphone": "prəˈhɪbɪtɪd",
+    "ukphone": "prəˈhɪbɪtɪd"
+  },
+  {
+    "name": "schema",
+    "trans": ["数据模式", "架构", "表结构"],
+    "usphone": "ˈskiːmə",
+    "ukphone": "ˈskiːmə"
+  },
+  {
+    "name": "simultaneously",
+    "trans": ["同时地", "同步"],
+    "usphone": "ˌsɪmlˈteɪniəsli",
+    "ukphone": "ˌsɪmlˈteɪniəsli"
+  },
+  {
+    "name": "dimensions",
+    "trans": ["维度", "评价层面"],
+    "usphone": "daɪˈmenʃnz",
+    "ukphone": "daɪˈmenʃnz"
+  },
+  {
+    "name": "completeness",
+    "trans": ["完整性", "完备度"],
+    "usphone": "kəmˈpliːtnəs",
+    "ukphone": "kəmˈpliːtnəs"
+  },
+  {
+    "name": "numerical",
+    "trans": ["数值的", "数字的"],
+    "usphone": "nuːˈmerɪkl",
+    "ukphone": "njuːˈmerɪkl"
+  },
+  {
+    "name": "tolerances",
+    "trans": ["容差", "误差允许范围"],
+    "usphone": "ˈtɑːlərənsɪz",
+    "ukphone": "ˈtɒlərənsɪz"
+  },
+  {
+    "name": "consistency",
+    "trans": ["一致性", "稳定统一"],
+    "usphone": "kənˈsɪstənsi",
+    "ukphone": "kənˈsɪstənsi"
+  },
+  {
+    "name": "verification",
+    "trans": ["验证", "核验"],
+    "usphone": "ˌverɪfɪˈkeɪʃn",
+    "ukphone": "ˌverɪfɪˈkeɪʃn"
+  },
+  {
+    "name": "separate",
+    "trans": ["独立的", "分开的"],
+    "usphone": "ˈsepərət",
+    "ukphone": "ˈsepərət"
+  },
+  {
+    "name": "retain",
+    "trans": ["保留", "留存"],
+    "usphone": "rɪˈteɪn",
+    "ukphone": "rɪˈteɪn"
+  },
+  {
+    "name": "independent",
+    "trans": ["独立的", "互不干扰的"],
+    "usphone": "ˌɪndɪˈpendənt",
+    "ukphone": "ˌɪndɪˈpendənt"
+  },
+  {
+    "name": "solvability",
+    "trans": ["可求解性", "可完成度"],
+    "usphone": "ˌsɑːlvəˈbɪləti",
+    "ukphone": "ˌsɒlvəˈbɪləti"
+  },
+  {
+    "name": "complicate",
+    "trans": ["复杂化", "增加复杂度"],
+    "usphone": "ˈkɑːmplɪkeɪt",
+    "ukphone": "ˈkɒmplɪkeɪt"
+  },
+  {
+    "name": "specifically",
+    "trans": ["具体来说", "明确地"],
+    "usphone": "spəˈsɪfɪkli",
+    "ukphone": "spəˈsɪfɪkli"
+  },
+  {
+    "name": "expand",
+    "trans": ["扩展", "延长"],
+    "usphone": "ɪkˈspænd",
+    "ukphone": "ɪkˈspænd"
+  },
+  {
+    "name": "rewrite",
+    "trans": ["重写", "改写"],
+    "usphone": "ˌriːˈraɪt",
+    "ukphone": "ˌriːˈraɪt"
+  },
+  {
+    "name": "obscure",
+    "trans": ["模糊化", "隐藏", "遮蔽"],
+    "usphone": "əbˈskjʊr",
+    "ukphone": "əbˈskjʊə(r)"
+  },
+  {
+    "name": "explicit",
+    "trans": ["显式的", "明确直白的"],
+    "usphone": "ɪkˈsplɪsɪt",
+    "ukphone": "ɪkˈsplɪsɪt"
+  },
+  {
+    "name": "infer",
+    "trans": ["推断", "推理得出"],
+    "usphone": "ɪnˈfɜːr",
+    "ukphone": "ɪnˈfɜː(r)"
+  },
+  {
+    "name": "purely",
+    "trans": ["纯粹地", "完全依靠"],
+    "usphone": "ˈpjʊrli",
+    "ukphone": "ˈpjʊəli"
+  }
+]
+
+[
+  {
+    "name": "comprehensive",
+    "trans": ["全面的", "综合的"],
+    "usphone": "ˌkɑːmprɪˈhensɪv",
+    "ukphone": "ˌkɒmprɪˈhensɪv"
+  },
+  {
+    "name": "coverage",
+    "trans": ["覆盖范围", "覆盖率"],
+    "usphone": "ˈkʌvərɪdʒ",
+    "ukphone": "ˈkʌvərɪdʒ"
+  },
+  {
+    "name": "characteristics",
+    "trans": ["特征", "特性"],
+    "usphone": "ˌkerəktəˈrɪstɪks",
+    "ukphone": "ˌkærəktəˈrɪstɪks"
+  },
+  {
+    "name": "demand",
+    "trans": ["需要", "要求"],
+    "usphone": "dɪˈmænd",
+    "ukphone": "dɪˈmɑːnd"
+  },
+  {
+    "name": "patterns",
+    "trans": ["模式", "范式"],
+    "usphone": "ˈpætərnz",
+    "ukphone": "ˈpætənz"
+  },
+  {
+    "name": "expressed",
+    "trans": ["表达", "表示"],
+    "usphone": "ɪkˈsprest",
+    "ukphone": "ɪkˈsprest"
+  },
+  {
+    "name": "aggregation",
+    "trans": ["聚合", "汇总计算"],
+    "usphone": "ˌæɡrɪˈɡeɪʃn",
+    "ukphone": "ˌæɡrɪˈɡeɪʃn"
+  },
+  {
+    "name": "complex",
+    "trans": ["复杂的", "高难度的"],
+    "usphone": "kəmˈpleks",
+    "ukphone": "ˈkɒmpleks"
+  },
+  {
+    "name": "entirely",
+    "trans": ["完全地", "全部"],
+    "usphone": "ɪnˈtaɪərli",
+    "ukphone": "ɪnˈtaɪəli"
+  },
+  {
+    "name": "objectives",
+    "trans": ["目标", "任务目的"],
+    "usphone": "əbˈdʒektɪvz",
+    "ukphone": "əbˈdʒektɪvz"
+  },
+  {
+    "name": "revealing",
+    "trans": ["暴露", "泄露"],
+    "usphone": "rɪˈviːlɪŋ",
+    "ukphone": "rɪˈviːlɪŋ"
+  },
+  {
+    "name": "subsequently",
+    "trans": ["随后", "紧接着"],
+    "usphone": "ˈsʌbsɪkwəntli",
+    "ukphone": "ˈsʌbsɪkwəntli"
+  },
+  {
+    "name": "comprehensive",
+    "trans": ["完整的", "全面的"],
+    "usphone": "ˌkɑːmprɪˈhensɪv",
+    "ukphone": "ˌkɒmprɪˈhensɪv"
+  },
+  {
+    "name": "implementations",
+    "trans": ["实现代码", "实现逻辑"],
+    "usphone": "ˌɪmplɪmenˈteɪʃnz",
+    "ukphone": "ˌɪmplɪmenˈteɪʃnz"
+  },
+  {
+    "name": "utilize",
+    "trans": ["使用", "利用"],
+    "usphone": "ˈjuːtəlaɪz",
+    "ukphone": "ˈjuːtəlaɪz"
+  },
+  {
+    "name": "statistical",
+    "trans": ["统计的", "统计学相关"],
+    "usphone": "stəˈtɪstɪkl",
+    "ukphone": "stəˈtɪstɪkl"
+  },
+  {
+    "name": "wraps",
+    "trans": ["封装", "包裹"],
+    "usphone": "ræps",
+    "ukphone": "ræps"
+  },
+  {
+    "name": "syntax",
+    "trans": ["语法", "句法"],
+    "usphone": "ˈsɪntæks",
+    "ukphone": "ˈsɪntæks"
+  },
+  {
+    "name": "iteratively",
+    "trans": ["迭代地", "反复循环地"],
+    "usphone": "ˈɪtərətɪvli",
+    "ukphone": "ˈɪtərətɪvli"
+  },
+  {
+    "name": "executed",
+    "trans": ["执行完成的", "运行过的"],
+    "usphone": "ˈeksɪkjuːtɪd",
+    "ukphone": "ˈeksɪkjuːtɪd"
+  },
+  {
+    "name": "assertions",
+    "trans": ["断言", "校验判断语句"],
+    "usphone": "əˈsɜːrʃnz",
+    "ukphone": "əˈsɜːʃnz"
+  },
+  {
+    "name": "robustly",
+    "trans": ["稳定可靠地", "鲁棒地"],
+    "usphone": "roʊˈbʌstli",
+    "ukphone": "rəʊˈbʌstli"
+  },
+  {
+    "name": "candidate",
+    "trans": ["候选的", "备选"],
+    "usphone": "ˈkændɪdət",
+    "ukphone": "ˈkændɪdət"
+  },
+  {
+    "name": "underlying",
+    "trans": ["底层的", "基础的"],
+    "usphone": "ˌʌndərˈlaɪɪŋ",
+    "ukphone": "ˌʌndəˈlaɪɪŋ"
+  },
+  {
+    "name": "constraints",
+    "trans": ["约束条件", "限制规则"],
+    "usphone": "kənˈstreɪnts",
+    "ukphone": "kənˈstreɪnts"
+  },
+  {
+    "name": "rigorous",
+    "trans": ["严格的", "严谨的"],
+    "usphone": "ˈrɪɡərəs",
+    "ukphone": "ˈrɪɡərəs"
+  },
+  {
+    "name": "filtering",
+    "trans": ["筛选", "过滤"],
+    "usphone": "ˈfɪltərɪŋ",
+    "ukphone": "ˈfɪltərɪŋ"
+  },
+  {
+    "name": "protocol",
+    "trans": ["流程规范", "协议"],
+    "usphone": "ˈproʊtəkɔːl",
+    "ukphone": "ˈprəʊtəkɒl"
+  },
+  {
+    "name": "preserved",
+    "trans": ["保留", "留存"],
+    "usphone": "prɪˈzɜːrvd",
+    "ukphone": "prɪˈzɜːvd"
+  },
+  {
+    "name": "challenging",
+    "trans": ["有挑战性的", "高难度的"],
+    "usphone": "ˈtʃælɪndʒɪŋ",
+    "ukphone": "ˈtʃælɪndʒɪŋ"
+  },
+  {
+    "name": "solvable",
+    "trans": ["可求解的", "可完成的"],
+    "usphone": "ˈsɑːlvəbl",
+    "ukphone": "ˈsɒlvəbl"
+  }
+]
+
+[
+  {
+    "name": "specifically",
+    "trans": ["具体来说", "明确地"],
+    "usphone": "spəˈsɪfɪkli",
+    "ukphone": "spəˈsɪfɪkli"
+  },
+  {
+    "name": "invocations",
+    "trans": ["调用", "启用操作"],
+    "usphone": "ˌɪnvəˈkeɪʃnz",
+    "ukphone": "ˌɪnvəˈkeɪʃnz"
+  },
+  {
+    "name": "implementing",
+    "trans": ["实现", "编写执行逻辑"],
+    "usphone": "ˈɪmplɪmentɪŋ",
+    "ukphone": "ˈɪmplɪmentɪŋ"
+  },
+  {
+    "name": "intricate",
+    "trans": ["复杂精巧的", "错综复杂的"],
+    "usphone": "ˈɪntrɪkət",
+    "ukphone": "ˈɪntrɪkət"
+  },
+  {
+    "name": "mandate",
+    "trans": ["强制要求", "规定必须执行"],
+    "usphone": "ˈmændeɪt",
+    "ukphone": "mænˈdeɪt"
+  },
+  {
+    "name": "aggregations",
+    "trans": ["聚合计算", "数据汇总"],
+    "usphone": "ˌæɡrɪˈɡeɪʃnz",
+    "ukphone": "ˌæɡrɪˈɡeɪʃnz"
+  },
+  {
+    "name": "comprehensively",
+    "trans": ["全面地", "综合完整地"],
+    "usphone": "ˌkɑːmprɪˈhensɪvli",
+    "ukphone": "ˌkɒmprɪˈhensɪvli"
+  }
+]
+
+[
+  {
+    "name": "averaging",
+    "trans": ["平均达到", "均值为"],
+    "usphone": "ˈævərɪdʒɪŋ",
+    "ukphone": "ˈævərɪdʒɪŋ"
+  },
+  {
+    "name": "atomic",
+    "trans": ["原子级的", "最小独立单元的"],
+    "usphone": "əˈtɑːmɪk",
+    "ukphone": "əˈtɒmɪk"
+  },
+  {
+    "name": "alignment",
+    "trans": ["对齐", "贴合匹配"],
+    "usphone": "əˈlaɪnmənt",
+    "ukphone": "əˈlaɪnmənt"
+  },
+  {
+    "name": "interaction",
+    "trans": ["交互", "互动回合"],
+    "usphone": "ˌɪntərˈækʃn",
+    "ukphone": "ˌɪntərˈækʃn"
+  },
+  {
+    "name": "indicating",
+    "trans": ["表明", "意味着"],
+    "usphone": "ˈɪndɪkeɪtɪŋ",
+    "ukphone": "ˈɪndɪkeɪtɪŋ"
+  },
+  {
+    "name": "substantial",
+    "trans": ["显著的", "较大程度的"],
+    "usphone": "səbˈstænʃl",
+    "ukphone": "səbˈstænʃl"
+  },
+  {
+    "name": "fraction",
+    "trans": ["一小部分", "占比"],
+    "usphone": "ˈfrækʃn",
+    "ukphone": "ˈfrækʃn"
+  },
+  {
+    "name": "aggregate",
+    "trans": ["汇总的", "整体聚合的"],
+    "usphone": "ˈæɡrɪɡət",
+    "ukphone": "ˈæɡrɪɡət"
+  },
+  {
+    "name": "reader-facing",
+    "trans": ["面向读者的", "可视化展示用的"],
+    "usphone": "ˈriːdər ˈfeɪsɪŋ",
+    "ukphone": "ˈriːdə ˈfeɪsɪŋ"
+  },
+  {
+    "name": "representative",
+    "trans": ["代表性的", "典型的"],
+    "usphone": "ˌreprɪˈzentətɪv",
+    "ukphone": "ˌreprɪˈzentətɪv"
+  },
+  {
+    "name": "verifiable",
+    "trans": ["可验证的", "可核验的"],
+    "usphone": "ˈverɪfaɪəbl",
+    "ukphone": "ˈverɪfaɪəbl"
+  },
+  {
+    "name": "crucially",
+    "trans": ["关键地", "至关重要的是"],
+    "usphone": "ˈkruːʃəli",
+    "ukphone": "ˈkruːʃəli"
+  },
+  {
+    "name": "diagnostic",
+    "trans": ["诊断型的", "问题检测的"],
+    "usphone": "ˌdaɪəɡˈnɑːstɪk",
+    "ukphone": "ˌdaɪəɡˈnɒstɪk"
+  },
+  {
+    "name": "identified",
+    "trans": ["识别出", "定位"],
+    "usphone": "aɪˈdentɪfaɪd",
+    "ukphone": "aɪˈdentɪfaɪd"
+  },
+  {
+    "name": "expansion",
+    "trans": ["扩充", "拓展生成"],
+    "usphone": "ɪkˈspænʃn",
+    "ukphone": "ɪkˈspænʃn"
+  }
+]
+
+[
+  {
+    "name": "constructing",
+    "trans": ["构建", "搭建"],
+    "usphone": "kənˈstrʌktɪŋ",
+    "ukphone": "kənˈstrʌktɪŋ"
+  },
+  {
+    "name": "serves",
+    "trans": ["充当", "用作"],
+    "usphone": "sɜːrvz",
+    "ukphone": "sɜːvz"
+  },
+  {
+    "name": "substrate",
+    "trans": ["底层载体", "数据基底"],
+    "usphone": "ˈsʌbstreɪt",
+    "ukphone": "ˈsʌbstreɪt"
+  },
+  {
+    "name": "produces",
+    "trans": ["生成", "输出"],
+    "usphone": "prəˈduːsɪz",
+    "ukphone": "prəˈdjuːsɪz"
+  },
+  {
+    "name": "triggered",
+    "trans": ["触发", "被唤起执行"],
+    "usphone": "ˈtrɪɡərd",
+    "ukphone": "ˈtrɪɡəd"
+  },
+  {
+    "name": "subsequent",
+    "trans": ["后续的", "接下来的"],
+    "usphone": "ˈsʌbsɪkwənt",
+    "ukphone": "ˈsʌbsɪkwənt"
+  }
+]
+
+[
+  {
+    "name": "distinct",
+    "trans": ["截然不同的", "有区别的"],
+    "usphone": "dɪˈstɪŋkt",
+    "ukphone": "dɪˈstɪŋkt"
+  },
+  {
+    "name": "assignment",
+    "trans": ["分配", "赋值"],
+    "usphone": "əˈsaɪnmənt",
+    "ukphone": "əˈsaɪnmənt"
+  },
+  {
+    "name": "correctness",
+    "trans": ["正确性", "准确程度"],
+    "usphone": "kəˈrektnəs",
+    "ukphone": "kəˈrektnəs"
+  },
+  {
+    "name": "constraints",
+    "trans": ["约束条件", "限制规则"],
+    "usphone": "kənˈstreɪnts",
+    "ukphone": "kənˈstreɪnts"
+  },
+  {
+    "name": "compliance",
+    "trans": ["合规性", "符合规范"],
+    "usphone": "kəmˈplaɪəns",
+    "ukphone": "kəmˈplaɪəns"
+  },
+  {
+    "name": "instantiate",
+    "trans": ["实例化", "创建具体实例"],
+    "usphone": "ɪnˈstænʃieɪt",
+    "ukphone": "ɪnˈstænʃieɪt"
+  },
+  {
+    "name": "criterion",
+    "trans": ["评判标准", "指标"],
+    "usphone": "kraɪˈtɪriən",
+    "ukphone": "kraɪˈtɪəriən"
+  },
+  {
+    "name": "indicators",
+    "trans": ["指示值", "标记量"],
+    "usphone": "ˈɪndɪkeɪtərz",
+    "ukphone": "ˈɪndɪkeɪtəz"
+  },
+  {
+    "name": "indicator",
+    "trans": ["指示", "标识"],
+    "usphone": "ˈɪndɪkeɪtər",
+    "ukphone": "ˈɪndɪkeɪtə"
+  },
+  {
+    "name": "assesses",
+    "trans": ["评估", "评判"],
+    "usphone": "əˈsesɪz",
+    "ukphone": "əˈsesɪz"
+  }
+]
+
+[
+  {
+    "name": "normalized",
+    "trans": ["归一化的", "标准化的"],
+    "usphone": "ˈnɔːrməlaɪzd",
+    "ukphone": "ˈnɔːməlaɪzd"
+  },
+  {
+    "name": "diagnostic",
+    "trans": ["诊断式的", "问题检测的"],
+    "usphone": "ˌdaɪəɡˈnɑːstɪk",
+    "ukphone": "ˌdaɪəɡˈnɒstɪk"
+  },
+  {
+    "name": "continuously",
+    "trans": ["持续地", "不断地"],
+    "usphone": "kənˈtɪnjuəsli",
+    "ukphone": "kənˈtɪnjuəsli"
+  },
+  {
+    "name": "self-reinforcing",
+    "trans": ["自强化的", "自我增益的"],
+    "usphone": "ˌself ˌriːɪnˈfɔːrsɪŋ",
+    "ukphone": "ˌself ˌriːɪnˈfɔːsɪŋ"
+  },
+  {
+    "name": "hierarchical",
+    "trans": ["分层的", "层级式的"],
+    "usphone": "ˌhaɪəˈrɑːrkɪkl",
+    "ukphone": "ˌhaɪəˈrɑːkɪkl"
+  },
+  {
+    "name": "controllable",
+    "trans": ["可控的", "可管控的"],
+    "usphone": "kənˈtroʊləbl",
+    "ukphone": "kənˈtrəʊləbl"
+  },
+  {
+    "name": "concretely",
+    "trans": ["具体来说", "切实地"],
+    "usphone": "kənˈkriːtli",
+    "ukphone": "ˈkɒŋkriːtli"
+  },
+  {
+    "name": "instantiate",
+    "trans": ["实例化", "生成具体实例"],
+    "usphone": "ɪnˈstænʃieɪt",
+    "ukphone": "ɪnˈstænʃieɪt"
+  },
+  {
+    "name": "overfitting",
+    "trans": ["过拟合"],
+    "usphone": "ˌoʊvərˈfɪtɪŋ",
+    "ukphone": "ˌəʊvəˈfɪtɪŋ"
+  },
+  {
+    "name": "validator",
+    "trans": ["校验器", "验证工具"],
+    "usphone": "ˈvælɪdeɪtər",
+    "ukphone": "ˈvælɪdeɪtə"
+  },
+  {
+    "name": "erroneous",
+    "trans": ["错误的", "有偏差的"],
+    "usphone": "ɪˈroʊniəs",
+    "ukphone": "ɪˈrəʊniəs"
+  },
+  {
+    "name": "subsequent",
+    "trans": ["后续的", "接下来的"],
+    "usphone": "ˈsʌbsɪkwənt",
+    "ukphone": "ˈsʌbsɪkwənt"
+  }
+]
+
+
+[
+  {
+    "name": "effectiveness",
+    "trans": ["有效性", "效果"],
+    "usphone": "ɪˌfekˈtɪvnəs",
+    "ukphone": "ɪˌfekˈtɪvnəs"
+  },
+  {
+    "name": "properties",
+    "trans": ["特性", "属性"],
+    "usphone": "ˈprɑːpərtiz",
+    "ukphone": "ˈprɒpətiz"
+  },
+  {
+    "name": "proprietary",
+    "trans": ["闭源的", "私有商用的"],
+    "usphone": "prəˈpraɪəteri",
+    "ukphone": "prəˈpraɪətri"
+  }
+]
+
+[
+  {
+    "name": "preventing",
+    "trans": ["防止", "规避"],
+    "usphone": "prɪˈventɪŋ",
+    "ukphone": "prɪˈventɪŋ"
+  },
+  {
+    "name": "interpreter",
+    "trans": ["解释器"],
+    "usphone": "ɪnˈtɜːrprətər",
+    "ukphone": "ɪnˈtɜːprətə(r)"
+  },
+  {
+    "name": "patterns",
+    "trans": ["模式", "规律", "范式"],
+    "usphone": "ˈpætərnz",
+    "ukphone": "ˈpætənz"
+  },
+  {
+    "name": "anchors",
+    "trans": ["锚点", "基准参照"],
+    "usphone": "ˈæŋkərz",
+    "ukphone": "ˈæŋkəz"
+  },
+  {
+    "name": "subsequent",
+    "trans": ["后续的", "紧接着的"],
+    "usphone": "ˈsʌbsɪkwənt",
+    "ukphone": "ˈsʌbsɪkwənt"
+  },
+  {
+    "name": "erroneous",
+    "trans": ["错误的", "有偏差的"],
+    "usphone": "ɪˈroʊniəs",
+    "ukphone": "ɪˈrəʊniəs"
+  },
+  {
+    "name": "instantiate",
+    "trans": ["实例化", "初始化生成"],
+    "usphone": "ɪnˈstænʃieɪt",
+    "ukphone": "ɪnˈstænʃieɪt"
+  },
+  {
+    "name": "accompanied",
+    "trans": ["伴随", "附带"],
+    "usphone": "əˈkʌmpənid",
+    "ukphone": "əˈkʌmpənid"
+  },
+  {
+    "name": "complexification",
+    "trans": ["复杂化处理", "复杂度提升"],
+    "usphone": "kəmˌpleksɪfɪˈkeɪʃn",
+    "ukphone": "kəmˌpleksɪfɪˈkeɪʃn"
+  },
+  {
+    "name": "insufficient",
+    "trans": ["不足的", "欠缺的"],
+    "usphone": "ˌɪnsəˈfɪʃnt",
+    "ukphone": "ˌɪnsəˈfɪʃnt"
+  },
+  {
+    "name": "augment",
+    "trans": ["扩充", "增强", "扩增"],
+    "usphone": "ɔːɡˈment",
+    "ukphone": "ɔːɡˈment"
+  }
+]
+
+[
+  {
+    "name": "subsets",
+    "trans": ["子集", "子样本集"],
+    "usphone": "ˈsʌbsets",
+    "ukphone": "ˈsʌbsets"
+  },
+  {
+    "name": "Implementation",
+    "trans": ["实现", "工程搭建"],
+    "usphone": "ˌɪmplɪmenˈteɪʃn",
+    "ukphone": "ˌɪmplɪmenˈteɪʃn"
+  },
+  {
+    "name": "artifacts",
+    "trans": ["产出物", "生成文件"],
+    "usphone": "ˈɑːrtɪfækts",
+    "ukphone": "ˈɑːtɪfækts"
+  },
+  {
+    "name": "likewise",
+    "trans": ["同样地", "同理"],
+    "usphone": "ˈlaɪkwaɪz",
+    "ukphone": "ˈlaɪkwaɪz"
+  },
+  {
+    "name": "subsequent",
+    "trans": ["后续的", "接下来的"],
+    "usphone": "ˈsʌbsɪkwənt",
+    "ukphone": "ˈsʌbsɪkwənt"
+  },
+  {
+    "name": "enhance",
+    "trans": ["增强", "提升"],
+    "usphone": "ɪnˈhæns",
+    "ukphone": "ɪnˈhɑːns"
+  },
+  {
+    "name": "capped",
+    "trans": ["设上限", "限制最大值"],
+    "usphone": "kæpt",
+    "ukphone": "kæpt"
+  },
+  {
+    "name": "temperature",
+    "trans": ["温度系数（生成采样超参）"],
+    "usphone": "ˈtemprətʃər",
+    "ukphone": "ˈtemprətʃə(r)"
+  },
+  {
+    "name": "variance",
+    "trans": ["方差", "随机波动"],
+    "usphone": "ˈveriəns",
+    "ukphone": "ˈveəriəns"
+  },
+  {
+    "name": "consistently",
+    "trans": ["持续地", "稳定一致地"],
+    "usphone": "kənˈsɪstəntli",
+    "ukphone": "kənˈsɪstəntli"
+  },
+  {
+    "name": "demonstrating",
+    "trans": ["证明", "展示出"],
+    "usphone": "ˈdemənstreɪtɪŋ",
+    "ukphone": "ˈdemənstreɪtɪŋ"
+  },
+  {
+    "name": "comprehensive",
+    "trans": ["全面的", "完备的"],
+    "usphone": "ˌkɑːmprɪˈhensɪv",
+    "ukphone": "ˌkɒmprɪˈhensɪv"
+  },
+  {
+    "name": "scenarios",
+    "trans": ["场景", "应用情境"],
+    "usphone": "səˈnærioʊz",
+    "ukphone": "səˈnɑːriəʊz"
+  },
+  {
+    "name": "constrained",
+    "trans": ["受限的", "存在局限"],
+    "usphone": "kənˈstreɪnd",
+    "ukphone": "kənˈstreɪnd"
+  },
+  {
+    "name": "stateful",
+    "trans": ["带状态的", "状态留存的"],
+    "usphone": "ˈsteɪtfəl",
+    "ukphone": "ˈsteɪtfəl"
+  },
+  {
+    "name": "struggle",
+    "trans": ["难以应对", "表现不佳"],
+    "usphone": "ˈstrʌɡl",
+    "ukphone": "ˈstrʌɡl"
+  },
+  {
+    "name": "orchestration",
+    "trans": ["编排", "多工具协同调度"],
+    "usphone": "ˌɔːrkɪˈstreɪʃn",
+    "ukphone": "ˌɔːkɪˈstreɪʃn"
+  }
+]
+
