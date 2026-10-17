@@ -1,11 +1,13 @@
 import DictionaryGroup from './CategoryDicts'
 import CustomDictManager from './CustomDictManager'
 import DictRequest from './DictRequest'
+import DictionaryComponent from './DictionaryWithoutCover'
 import { LanguageTabSwitcher } from './LanguageTabSwitcher'
 import Layout from '@/components/Layout'
 import { dictionaries } from '@/resources/dictionary'
 import { currentDictInfoAtom, customDictsAtom } from '@/store'
 import type { Dictionary, LanguageCategoryType } from '@/typings'
+import { getDictChapterCount, getDictWords } from '@/utils/customDict'
 import groupBy, { groupByDictTags } from '@/utils/groupBy'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 import { useAtomValue } from 'jotai'
@@ -20,6 +22,9 @@ import IconX from '~icons/tabler/x'
 export type GalleryState = {
   currentLanguageTab: LanguageCategoryType
 }
+
+/** 只保留英语和 Code 两个语言分类 */
+const SUPPORTED_LANGUAGE_TABS: LanguageCategoryType[] = ['en', 'code']
 
 const initialGalleryState: GalleryState = {
   currentLanguageTab: 'en',
@@ -36,29 +41,31 @@ export default function GalleryPage() {
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
   const customDicts = useAtomValue(customDictsAtom)
 
-  const { groupedByCategoryAndTag } = useMemo(() => {
-    const allDicts = [
-      ...dictionaries,
-      ...customDicts.map((d) => ({
+  const { customDictList, groupedByCategoryAndTag } = useMemo(() => {
+    // 自定义词典单独放在最上面
+    const customDictList: Dictionary[] = customDicts
+      .filter((d) => (d.languageCategory || 'en') === galleryState.currentLanguageTab)
+      .map((d) => ({
         id: d.id,
         name: d.name,
         description: d.description,
         category: d.category || '自定义',
         tags: d.tags || ['自定义'],
         url: d.url,
-        length: d.length,
+        length: getDictWords(d).length,
         language: d.language || 'en',
         languageCategory: d.languageCategory || 'en',
-        chapterCount: Math.ceil(d.length / 20) || 1,
-      })),
-    ]
-    const currentLanguageCategoryDicts = allDicts.filter((dict) => dict.languageCategory === galleryState.currentLanguageTab)
-    const groupedByCategory = Object.entries(groupBy(currentLanguageCategoryDicts, (dict) => dict.category))
+        chapterCount: getDictChapterCount(d),
+      }))
+
+    const builtInDicts = dictionaries.filter((dict) => dict.languageCategory === galleryState.currentLanguageTab)
+    const groupedByCategory = Object.entries(groupBy(builtInDicts, (dict) => dict.category))
     const groupedByCategoryAndTag = groupedByCategory.map(
       ([category, dicts]) => [category, groupByDictTags(dicts)] as [string, Record<string, Dictionary[]>],
     )
 
     return {
+      customDictList,
       groupedByCategoryAndTag,
     }
   }, [galleryState.currentLanguageTab, customDicts])
@@ -72,7 +79,9 @@ export default function GalleryPage() {
   useEffect(() => {
     if (currentDictInfo) {
       setGalleryState((state) => {
-        state.currentLanguageTab = currentDictInfo.languageCategory
+        state.currentLanguageTab = SUPPORTED_LANGUAGE_TABS.includes(currentDictInfo.languageCategory)
+          ? currentDictInfo.languageCategory
+          : 'en'
       })
     }
   }, [currentDictInfo, setGalleryState])
@@ -94,6 +103,19 @@ export default function GalleryPage() {
               <ScrollArea.Root className="flex-1 overflow-y-auto">
                 <ScrollArea.Viewport className="h-full w-full ">
                   <div className="mr-4 flex flex-1 flex-col items-start justify-start gap-14 overflow-y-auto">
+                    {customDictList.length > 0 && (
+                      <div className="w-full">
+                        <div className="mb-3 flex items-baseline gap-3">
+                          <h2 className="text-xl font-bold text-gray-700 dark:text-gray-200">我的自定义词典</h2>
+                          <span className="text-sm text-gray-400">共 {customDictList.length} 个</span>
+                        </div>
+                        <div className="grid gap-x-5 gap-y-10 px-1 pb-4 sm:grid-cols-1 md:grid-cols-2 dic3:grid-cols-3 dic4:grid-cols-4">
+                          {customDictList.map((dict) => (
+                            <DictionaryComponent key={dict.id} dictionary={dict} />
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     {groupedByCategoryAndTag.map(([category, groupeByTag]) => (
                       <DictionaryGroup key={category} groupedDictsByTag={groupeByTag} />
                     ))}

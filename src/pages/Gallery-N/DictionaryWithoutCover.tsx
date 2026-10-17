@@ -22,10 +22,10 @@ export default function DictionaryComponent({ dictionary }: Props) {
   const entry = useIntersectionObserver(divRef, {})
   const isVisible = !!entry?.isIntersecting
   const dictStats = useDictStats(dictionary.id, isVisible)
-  const chapterCount = useMemo(() => calcChapterCount(dictionary.length), [dictionary.length])
+  const chapterCount = dictionary.chapterCount || calcChapterCount(dictionary.length)
   const isSelected = currentDictID === dictionary.id
   const progress = useMemo(
-    () => (dictStats ? Math.ceil((dictStats.exercisedChapterCount / chapterCount) * 100) : 0),
+    () => (dictStats && chapterCount > 0 ? Math.ceil((dictStats.exercisedChapterCount / chapterCount) * 100) : 0),
     [dictStats, chapterCount],
   )
 

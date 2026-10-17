@@ -4,9 +4,9 @@ FROM node:20 AS build
 WORKDIR /app
 
 COPY . .
-RUN npm config set registry  https://registry.npmmirror.com  
-RUN npm install
-RUN npm run build
+RUN yarn config set registry https://registry.npmmirror.com
+RUN yarn install --frozen-lockfile
+RUN yarn build
 
 # 将构建好的 React 应用复制到 Nginx 容器的默认站点目录
 FROM nginx:alpine

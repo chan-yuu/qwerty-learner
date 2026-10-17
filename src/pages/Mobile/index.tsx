@@ -594,14 +594,6 @@ const MobilePage: React.FC = () => {
                     <span className="text-indigo-500">•</span>
                     <span>王陆雅思王听力语料库</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
-                    <span>日语常见词 N1-N5</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-indigo-500">•</span>
-                    <span>哈萨克语基础3000词</span>
-                  </div>
                 </div>
               </div>
 

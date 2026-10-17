@@ -14,25 +14,37 @@ import { DonateCard } from '@/components/DonateCard'
 import Header from '@/components/Header'
 import Tooltip from '@/components/Tooltip'
 import { idDictionaryMap } from '@/resources/dictionary'
-import { currentChapterAtom, currentDictIdAtom, customDictsAtom, isReviewModeAtom, randomConfigAtom, reviewModeInfoAtom } from '@/store'
+import {
+  currentChapterAtom,
+  currentDictIdAtom,
+  customDictManagerRequestAtom,
+  customDictsAtom,
+  isReviewModeAtom,
+  randomConfigAtom,
+  reviewModeInfoAtom,
+} from '@/store'
 import { IsDesktop, isLegal } from '@/utils'
 import { useSaveChapterRecord } from '@/utils/db'
 import { useMixPanelChapterLogUploader } from '@/utils/mixpanel'
 import { useAtom, useAtomValue, useSetAtom } from 'jotai'
 import type React from 'react'
 import { useCallback, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useImmerReducer } from 'use-immer'
 
 const App: React.FC = () => {
   const [state, dispatch] = useImmerReducer(typingReducer, structuredClone(initialState))
+  const { words, isLoading: isWordListLoading } = useWordList()
   const [isLoading, setIsLoading] = useState<boolean>(true)
-  const { words } = useWordList()
+  const navigate = useNavigate()
 
   const [currentDictId, setCurrentDictId] = useAtom(currentDictIdAtom)
   const setCurrentChapter = useSetAtom(currentChapterAtom)
+  const setManagerRequest = useSetAtom(customDictManagerRequestAtom)
   const randomConfig = useAtomValue(randomConfigAtom)
   const chapterLogUploader = useMixPanelChapterLogUploader(state)
   const saveChapterRecord = useSaveChapterRecord()
+  const isEmptyChapter = !isWordListLoading && words.length === 0
 
   const reviewModeInfo = useAtomValue(reviewModeInfoAtom)
   const isReviewMode = useAtomValue(isReviewModeAtom)
@@ -77,8 +89,18 @@ const App: React.FC = () => {
   }, [dispatch])
 
   useEffect(() => {
-    state.chapterData.words?.length > 0 ? setIsLoading(false) : setIsLoading(true)
-  }, [state.chapterData.words])
+    // 词表还在加载
+    if (isWordListLoading) {
+      setIsLoading(true)
+      return
+    }
+    // 章节确实没有单词：结束 loading，改为展示空状态
+    if (words.length === 0) {
+      setIsLoading(false)
+      return
+    }
+    setIsLoading(!(state.chapterData.words?.length > 0))
+  }, [isWordListLoading, words.length, state.chapterData.words])
 
   useEffect(() => {
     if (!state.isTyping) {
@@ -138,7 +160,7 @@ const App: React.FC = () => {
           <DictChapterButton />
           <PronunciationSwitcher />
           <Switcher />
-          <StartButton isLoading={isLoading} />
+          <StartButton isLoading={isLoading || isEmptyChapter} />
           <Tooltip content="跳过该词">
             <button
               className={`${
@@ -159,6 +181,33 @@ const App: React.FC = () => {
                     className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid  border-indigo-400 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
                     role="status"
                   ></div>
+                </div>
+              ) : isEmptyChapter ? (
+                <div className="flex w-full max-w-xl flex-col items-center justify-center gap-4 px-6 text-center">
+                  <div className="text-5xl">📭</div>
+                  <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200">当前章节还没有单词</h2>
+                  <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                    {currentDictId.startsWith('custom_')
+                      ? '这个自定义词库的当前章节是空的，去「管理章节」里新建章节或导入单词，也可以切换到其它章节。'
+                      : '当前章节没有可练习的单词，请切换到其它章节。'}
+                  </p>
+                  <div className="flex flex-wrap items-center justify-center gap-3">
+                    {currentDictId.startsWith('custom_') && (
+                      <button
+                        type="button"
+                        className="my-btn-primary"
+                        onClick={() => {
+                          setManagerRequest({ dictId: currentDictId })
+                          navigate('/gallery')
+                        }}
+                      >
+                        去添加单词
+                      </button>
+                    )}
+                    <button type="button" className="my-btn-primary bg-gray-400 hover:bg-gray-500" onClick={() => navigate('/gallery')}>
+                      返回词库
+                    </button>
+                  </div>
                 </div>
               ) : (
                 !state.isFinished && <WordPanel />

@@ -12,26 +12,37 @@ import type {
   WordDictationOpenBy,
   WordDictationType,
 } from '@/typings'
+import { getDictChapterCount } from '@/utils/customDict'
+import type { CustomDict } from '@/utils/customDict'
 import type { ReviewRecord } from '@/utils/db/record'
 import { atom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
 
-export type CustomDict = {
-  id: string
-  name: string
-  description: string
-  category: string
-  tags: string[]
-  url: string
-  length: number
-  language: LanguageType
-  languageCategory: LanguageCategoryType
-  words: Word[]
+export type { CustomDict, CustomDictChapter } from '@/utils/customDict'
+
+/**
+ * 首帧同步读取 localStorage。
+ * jotai 2.1.0 的 atomWithStorage 没有 getOnInit 选项，默认先用 initialValue 渲染、
+ * 挂载后才异步回填存储值。这会导致 Typing 页在首帧把自定义词典误判为“不存在”并重置为 cet4。
+ * 把存储值当作 initialValue 传入即可让首帧就拿到正确值。
+ */
+function getStoredValue<T>(key: string, fallback: T): T {
+  try {
+    const raw = typeof window === 'undefined' ? null : window.localStorage.getItem(key)
+    if (raw === null) return fallback
+    return JSON.parse(raw) as T
+  } catch (e) {
+    return fallback
+  }
 }
 
-export const customDictsAtom = atomWithStorage<CustomDict[]>('customDicts', [])
+export const customDictsAtom = atomWithStorage<CustomDict[]>('customDicts', getStoredValue<CustomDict[]>('customDicts', []))
 
-export const currentDictIdAtom = atomWithStorage('currentDict', 'cet4')
+export const currentDictIdAtom = atomWithStorage('currentDict', getStoredValue('currentDict', 'cet4'))
+
+/** 默认词典：设置后每次刷新页面都会回到这个词库 */
+export const defaultDictIdAtom = atomWithStorage<string | null>('defaultDict', getStoredValue<string | null>('defaultDict', null))
+
 export const currentDictInfoAtom = atom<Dictionary>((get) => {
   const id = get(currentDictIdAtom)
   let dict = idDictionaryMap[id]
@@ -39,7 +50,6 @@ export const currentDictInfoAtom = atom<Dictionary>((get) => {
     const customDicts = get(customDictsAtom)
     const custom = customDicts.find((d) => d.id === id)
     if (custom) {
-      const chapterCount = Math.ceil(custom.words.length / 20) || 1 // 20 is CHAPTER_LENGTH
       dict = {
         id: custom.id,
         name: custom.name,
@@ -50,7 +60,7 @@ export const currentDictInfoAtom = atom<Dictionary>((get) => {
         length: custom.length,
         language: custom.language,
         languageCategory: custom.languageCategory,
-        chapterCount,
+        chapterCount: getDictChapterCount(custom),
       }
     }
   }
@@ -61,7 +71,13 @@ export const currentDictInfoAtom = atom<Dictionary>((get) => {
   return dict
 })
 
-export const currentChapterAtom = atomWithStorage('currentChapter', 0)
+export const currentChapterAtom = atomWithStorage('currentChapter', getStoredValue('currentChapter', 0))
+
+/**
+ * 请求打开自定义词典管理器并直接进入某个词典的章节管理。
+ * 词典详情弹窗、打字页空章节提示等地方都可以复用。
+ */
+export const customDictManagerRequestAtom = atom<{ dictId: string } | null>(null)
 
 export const loopWordConfigAtom = atomForConfig<{ times: LoopWordTimesOption }>('loopWordConfig', {
   times: 1,

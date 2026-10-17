@@ -1,6 +1,7 @@
 import { CHAPTER_LENGTH } from '@/constants'
-import { currentChapterAtom, currentDictInfoAtom, reviewModeInfoAtom } from '@/store'
+import { currentChapterAtom, currentDictInfoAtom, customDictsAtom, reviewModeInfoAtom } from '@/store'
 import type { Word, WordWithIndex } from '@/typings/index'
+import { getDictChapters } from '@/utils/customDict'
 import { wordListFetcher } from '@/utils/wordListFetcher'
 import { useAtom, useAtomValue } from 'jotai'
 import { useMemo } from 'react'
@@ -17,6 +18,7 @@ export type UseWordListResult = {
  */
 export function useWordList(): UseWordListResult {
   const currentDictInfo = useAtomValue(currentDictInfoAtom)
+  const customDicts = useAtomValue(customDictsAtom)
   const [currentChapter, setCurrentChapter] = useAtom(currentChapterAtom)
   const { isReviewMode, reviewRecord } = useAtomValue(reviewModeInfoAtom)
 
@@ -25,8 +27,12 @@ export function useWordList(): UseWordListResult {
     setCurrentChapter(0)
   }
 
+  // 自定义词典使用显式章节，章节长度不再固定为 CHAPTER_LENGTH
+  const customDict = currentDictInfo.id.startsWith('custom_') ? customDicts.find((dict) => dict.id === currentDictInfo.id) : undefined
+  const customChapters = customDict ? getDictChapters(customDict) : undefined
+
   const isFirstChapter = !isReviewMode && currentDictInfo.id === 'cet4' && currentChapter === 0
-  const { data: wordList, error, isLoading } = useSWR(currentDictInfo.url, wordListFetcher)
+  const { data: wordList, error, isLoading } = useSWR(customDict ? null : currentDictInfo.url, wordListFetcher)
 
   const words: WordWithIndex[] = useMemo(() => {
     let newWords: Word[]
@@ -34,6 +40,8 @@ export function useWordList(): UseWordListResult {
       newWords = firstChapter
     } else if (isReviewMode) {
       newWords = reviewRecord?.words ?? []
+    } else if (customChapters) {
+      newWords = customChapters[currentChapter]?.words ?? []
     } else if (wordList) {
       newWords = wordList.slice(currentChapter * CHAPTER_LENGTH, (currentChapter + 1) * CHAPTER_LENGTH)
     } else {
@@ -56,7 +64,7 @@ export function useWordList(): UseWordListResult {
         trans,
       }
     })
-  }, [isFirstChapter, isReviewMode, wordList, reviewRecord?.words, currentChapter])
+  }, [isFirstChapter, isReviewMode, wordList, reviewRecord?.words, currentChapter, customChapters])
 
   return { words, isLoading, error }
 }
